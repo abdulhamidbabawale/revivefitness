@@ -3,202 +3,134 @@
   padding: 0;
 }
 body{
-  background-color: rgba(175, 221, 229,0.5) ;
-  min-height: 100vh;
+  background-color: rgba(175, 221, 229,0.7) ;
 }
-
-
-@media only screen and (min-width: 768px){
-  body{
-    background-color: rgba(175, 221, 229,0.5) ;
-  }
-  #platinium_button{
-    width: 90px;
-    background-image: linear-gradient(#0FA4AF,#024950);
-    box-shadow: 10px 10px 10px -10px  black;
-    border: none;
-    border-radius: 5px;
-    margin-left:20px ;
-    margin-bottom: 15px;
-
-  }
-  #standard_button{
-    width: 90px;
-    box-shadow: 10px 10px 10px -10px  black;
-    /* background-image: linear-gradient(#0FA4AF,#024950); */
-    background-image: linear-gradient(#0FA4AF,#AFDDE5);
-    border: none;
-    border-radius: 5px;
-    color: #09838c;
-    margin-left:20px ;
-    margin-bottom: 15px;
-
-  }
-  th{
-    height: 110px;
-    width: 250px;
-    border-bottom: 1px solid;
-  }
-  th p{
-
-    margin-left:20px ;
-
-  }
-  th h5{
-    margin-top: 20px;
-    margin-left:20px ;
-    color: #AFDDE5;
-
-  }
-  td{
-    height: 70px;
-    border-bottom: 1px solid;
-  }
-  td i{
-   /* margin: auto; */
-   /* display: flex;
-  justify-content: center;
-  margin-left: 100px; */
-  color: #AFDDE5;
-  margin-left: 45%;
-  margin-right: 50%;
-  /* text-align: center; */
-   font-size: 30px;
-  }
-
-  td p{
-    margin-left: 20px;
-
-  }
-  table{
-    margin: auto;
-    margin-bottom: 100px;
-    /* color: #AFDDE5; */
-  }
-  table p{
-    color: #AFDDE5;
-
-  }
-  .top_text{
-    width:700px;
-    margin: auto;
-  }
-
-  .top_text h1{
-    /* margin-left: 270px; */
-  }
-
-  .top_text h5{
-    /* margin-left: 270px; */
-    margin-bottom: 40px;
-  }
-  .top_text p{
- /* margin-left: 270px; */
-      /*  margin-right: 270px; */
-    margin-bottom: 40px;
-  }
-  .top_text h3{
-    /* margin-left: 270px; */
-    margin-bottom: 40px;
-
-  }
+main{
+  margin-top: 60px;
+}
+#platinium_button{
+  width: 90px;
+  background-image: linear-gradient(#0FA4AF,#024950);
+  box-shadow: 10px 10px 10px -10px  black;
+  border: none;
+  border-radius: 5px;
+  margin-left:20px ;
+  margin-bottom: 15px;
 
 }
-@media only screen and (min-width: 1024px){
-  body{
-    background-color: rgba(175, 221, 229,0.5) ;
-  }
-  #platinium_button{
-    width: 90px;
-    background-image: linear-gradient(#0FA4AF,#024950);
-    box-shadow: 10px 10px 10px -10px  black;
-    border: none;
-    border-radius: 5px;
-    margin-left:20px ;
-    margin-bottom: 15px;
+#standard_button{
+  width: 90px;
+  box-shadow: 10px 10px 10px -10px  black;
+  background-image: linear-gradient(#0FA4AF,#AFDDE5);
+  border: none;
+  border-radius: 5px;
+  color: #09838c;
+  margin-left:20px ;
+  margin-bottom: 15px;
 
-  }
-  #standard_button{
-    width: 90px;
-    box-shadow: 10px 10px 10px -10px  black;
-    /* background-image: linear-gradient(#0FA4AF,#024950); */
-    background-image: linear-gradient(#0FA4AF,#AFDDE5);
-    border: none;
-    border-radius: 5px;
-    color: #09838c;
-    margin-left:20px ;
-    margin-bottom: 15px;
+}
+th{
+  height: 110px;
+  width: 250px;
+  border-bottom: 1px solid;
+}
+th p{
 
-  }
-  th{
-    height: 110px;
-    width: 250px;
-    border-bottom: 1px solid;
-  }
-  th p{
+  margin-left:20px ;
 
-    margin-left:20px ;
-
-  }
-  th h5{
-    margin-top: 20px;
-    margin-left:20px ;
-    color: #AFDDE5;
-
-  }
-  td{
-    height: 70px;
-    border-bottom: 1px solid;
-  }
-  td i{
-   /* margin: auto; */
-   /* display: flex;
-  justify-content: center;
-  margin-left: 100px; */
+}
+th h5{
+  margin-top: 20px;
+  margin-left:20px ;
   color: #AFDDE5;
-  margin-left: 45%;
-  margin-right: 50%;
-  /* text-align: center; */
-   font-size: 30px;
-  }
 
-  td p{
-    margin-left: 20px;
+}
+td{
+  height: 70px;
+  border-bottom: 1px solid;
+}
+td i{
+color: #AFDDE5;
+margin-left: 45%;
+margin-right: 50%;
+ font-size: 30px;
+}
 
-  }
-  table{
-    margin: auto;
-    margin-bottom: 100px;
-    /* color: #AFDDE5; */
-  }
-  table p{
-    color: #AFDDE5;
+td p{
+  margin-left: 20px;
 
-  }
+}
+table{
+  margin: auto;
+  margin-bottom: 100px;
+}
+table p{
+  color: #AFDDE5;
+
+}
+.top_text {
+  margin: auto;
+  width: 750px;
+}
+
+.top_text h5{
+  margin-bottom: 70px;
+}
+.top_text p{
+  margin-bottom: 40px;
+}
+.top_text h3{
+  margin-bottom: 40px;
+
+}
+
+@media only screen and (max-width: 768px){
   .top_text {
-    /* width: auto; */
-
     margin: auto;
-    width: 750px;
-  }
-  .top_text h1{
-    /* margin-left: 270px; */
+    width: 100%;
   }
 
-  .top_text h5{
-    /* margin-left: 270px; */
-    margin-bottom: 70px;
-  }
-  .top_text p{
-    /* margin-left: 270px;
-    margin-right: 270px; */
-    margin-bottom: 40px;
-  }
-  .top_text h3{
-    /* margin-left: 270px; */
-    margin-bottom: 40px;
 
+}
+@media only screen and (max-width: 481px){
+  .top_text {
+    margin: auto;
+    padding-top: 17px;
+    width: 100%;
   }
+h1{
+  font-size: 21px;
+}
+h5{
+  font-size: 16px;
+}
+.top_text h5{
+  margin-bottom: 20px;
+}
+p{
+  font-size: 14px;
+
+}
+.top_text p{
+  margin-bottom: 20px;
+}
+td i{
+  font-size: 20px;
+ }
+ th p{
+  font-size: 12px;
+
+}
+th button{
+  font-size: 12px;
+}
+#platinium_button{
+  width: 70px;
+
+}
+#standard_button{
+  width: 70px;
+}
 }
 
 
