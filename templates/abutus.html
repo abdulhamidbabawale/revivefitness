@@ -1,0 +1,208 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Revive Fitness</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="/mystaticfiles/fontawesome-free-6.6.0-web/css/all.css">
+  <link rel="stylesheet" href="{% static 'footer.css' %}">
+  <link rel="stylesheet" href="{% static 'nav.css'%}">
+  <link rel="stylesheet" href="{% static 'aboutus.css'%}">
+
+</head>
+
+<body>
+  <!-- <header>
+        <div class="container">
+            <h1>About Us</h1>
+        </div>
+    </header> -->
+  <nav>
+    <div class="container">
+      <div class="nav_links">
+        <a href="#">
+          <li onclick=showSidebar()> <i class="fa-solid fa-bars" id="btn"></i></li>
+        </a>
+        <a href="#">
+          <li onclick=hideSidebar()> <i class="fa-solid fa-xmark" id="cancel"></i></li>
+        </a>
+        <div class="gym_logo">
+          <img src="/mystaticfiles/Mask group3.png" alt="">
+        </div>
+        <span class="left_nav">
+          <a href="/templates/index.html">
+            <li class="hide_on_mobile">Home</li>
+          </a>
+          <a href="/templates/membership.html">
+            <li class="hide_on_mobile">Membership</li>
+          </a>
+          <a style="  color: #afdde5;;" href="">
+            <li class="hide_on_mobile">About us</li>
+          </a>
+          <a href="">
+            <li class="hide_on_mobile">Classes</li>
+          </a>
+          <!-- <a href="#">
+              <li onclick=showSidebar()> <i class="fa-solid fa-bars" id="btn"></i></li>
+            </a> -->
+        </span>
+        <span class="sidebar hide_on_big">
+          <a style="color: #AFDDE5;" href="/templates/index.html">
+            <li>Home</li>
+          </a>
+          <a href="/templates/membership.html">
+            <li>Membership</li>
+          </a>
+          <a href="">
+            <li>About us</li>
+          </a>
+          <a href="">
+            <li>Classes</li>
+          </a>
+
+        </span>
+        <!-- <div class="login_join">
+
+      </div> -->
+        <span class="login_join">
+          <span class="login_style">
+            <a href="login.html">
+              <p>Login</p>
+            </a>
+          </span>
+          <span class="join_style">
+            <a class="join" href="joinus_plan.html">
+              <p>Join us</p>
+            </a>
+          </span>
+        </span>
+
+      </div>
+
+    </div>
+
+  </nav>
+  <main class="container">
+    <div class="about_img">
+      <img src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727023954/revive%20fitness/scv6nzojduu8d6om6iqp.jpg" alt="">
+    </div>
+    <div class="go_down">
+      <h2>Welcome to Revive Fitness</h2>
+      <p>Founded in 2023, Revive Fitness is Nigeria's premier destination for fitness enthusiasts seeking top-notch
+        training and wellness solutions. With a passion for promoting healthy lifestyles and achieving fitness goals, we
+        have expanded rapidly and now have branches across the country, ensuring that our members have access to our
+        world-class facilities and services no matter where they are.</p>
+    </div>
+    <div class="go_down">
+      <h2>Our Mission</h2>
+      <p>Our mission at Revive Fitness is to inspire and empower individuals to lead healthier lives through
+        comprehensive fitness programs, exceptional customer service, and a supportive community. We are dedicated to
+        helping you achieve your fitness goals, whether you're just starting out or are a seasoned athlete.</p>
+    </div>
+    <div class="go_down">
+      <h2>What We Offer</h2>
+      <p>At Revive Fitness, we provide a range of services and memberships tailored to suit various fitness needs and
+        preferences:</p>
+      <ul>
+        <li><strong>Training Classes:</strong> Our diverse range of training classes includes yoga, pilates, strength
+          training, cardio, and more. Each class is designed to cater to different fitness levels and preferences,
+          ensuring that everyone can find a suitable option.</li>
+        <li><strong>Gym Memberships:</strong> We offer flexible membership plans to accommodate your lifestyle and
+          fitness goals. Our membership options include:</li>
+        <ul>
+          <li><strong>Platinum Membership:</strong> Enjoy unlimited access to all our branches, priority booking for
+            classes, personalized training programs, and exclusive member benefits.</li>
+          <li><strong>Standard Membership:</strong> Access to our branches with standard class bookings and a range of
+            general fitness amenities.</li>
+        </ul>
+      </ul>
+    </div>
+    <!-- <a href="membership.html">
+      <button class="explore_plans">
+        explore our memberships
+      </button></a> -->
+
+      <div class="explore_plans">
+        <button>explore our memberships</button>
+
+      </div>
+      <div class="go_down">
+    <h2>Our Locations</h2>
+    <p>With branches spread across Nigeria, Revive Fitness is committed to making high-quality fitness solutions
+      accessible to everyone. Our state-of-the-art facilities are equipped with the latest fitness technology and
+      staffed by professional trainers who are dedicated to helping you succeed.</p>
+    </div>
+    <h2>Join Us Today!</h2>
+    <p>Whether you're looking to start a new fitness journey or enhance your existing routine, Revive Fitness is here to
+      support you every step of the way. Visit us at one of our branches or contact us to learn more about our
+      memberships and classes. We look forward to helping you achieve your fitness goals!</p>
+
+    <div class="highlight">
+      <p><strong>Contact Us:</strong> For more information, please reach out to us at <a
+          href="mailto:contact@revivefitness.ng">contact@revivefitness.ng</a> or call us at [Your Contact Number].</p>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row footer_top">
+          <div class="col-4">
+            <div class="footer_logo">
+              <img src="/mystaticfiles/Mask group3.png" alt="Footer Logo">
+            </div>
+            <div class="footer_notess">
+              <p>"Revive Fitness - Empowering Your Fitness Journey Across Nigeria. Join us in Lagos and beyond to
+                achieve strength, health, and wellness with our state-of-the-art facilities and expert trainers. Let's
+                revitalize your lifestyle together. © 2024 Revive Fitness. All rights reserved."</p>
+            </div>
+          </div>
+          <div class="col-4"></div>
+          <div class="col-2 site_mapss">
+            <h5>Site map</h5>
+            <p>Home</p>
+            <p>Membership</p>
+            <p>Classes</p>
+            <p>Contact us</p>
+            <p>About us</p>
+          </div>
+          <div class="col-2 open_hourss">
+            <h5>Open hours</h5>
+            <p>Monday-Friday 5AM-10PM</p>
+            <p>Saturday 7AM-8PM</p>
+            <p id="closed">Closed Jan 1, Dec 25 & 26</p>
+          </div>
+        </div>
+
+        <div class="row policy">
+          <div class="col-7">
+            <p>© 2024 I-FITNESS CENTRE LTD. ALL RIGHTS RESERVED.|</p>
+            <p>Support|</p>
+            <p>Privacy policy|</p>
+            <p>Terms of use</p>
+          </div>
+          <div class="col-3"></div>
+          <div class="col-2">
+            <div class="social_icons">
+              <i class="fa-brands fa-square-facebook"></i>
+              <i class="fa-brands fa-square-x-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-square-github"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

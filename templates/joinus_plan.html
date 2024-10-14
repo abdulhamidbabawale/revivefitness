@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+  <link rel="stylesheet" href="{% static 'join_plan.css'%}">
+  <link rel="stylesheet" href="{% static 'joinus_nav.css'%}">
+
+  {% block nav %}
+
+  {% endblock %}
+  <main class="container">
+    <!-- <ul>
+      <div class="num"><p>1</p></div><li>plan duration</li>
+     <div class="num"><p>2</p> </div><li>personal details</li>
+     <div class="num"><p>3</p></div><li>payment</li>
+     <div class="num"><p>4</p></div><li>checkout</li>
+    </ul> -->
+    <div class=" mm">
+      <div class="row top">
+        <div class="col oo">
+          <div class="num">
+            <p>1</p>
+          </div>
+          <li>plan duration</li>
+        </div>
+        <div class="col line">
+          <hr>
+        </div>
+        <div class="col oo">
+          <div class="num set_page_progress">
+            <p>2</p>
+          </div>
+          <li>personal details</li>
+        </div>
+        <div class="col line">
+          <hr>
+        </div>
+        <div class="col oo">
+          <div class="num">
+            <p>3</p>
+          </div>
+          <li>payment</li>
+        </div>
+        <div class="col line">
+          <hr>
+        </div>
+        <div class="col oo">
+          <div class="num">
+            <p>4</p>
+          </div>
+          <li>checkout</li>
+        </div>
+      </div>
+    </div>
+<div class="top_header">
+  <h3>Select  {premium} plan duration</h3>
+
+  <a id="change_plan" href="#">change plan</a>
+</div>
+
+
+ <div class="contents">
+  <div class="plans_duration">
+    <div class="duration monthly">
+     <h4>Monthly <br>plan</h4>
+     <p>monthly <br> subscription</p>
+     <p>N24,890</p>
+     <label for="monthly_plan">
+       <input id="monthly_plan" type="radio" name="duration">
+       <span type="button" id="select_but">select</span>
+      </label>
+     <p id="all_perks">Conatains all <a href="">perks</a> of {premium} membership</p>
+    </div>
+    <div class="duration quaterly">
+     <h4>Monthly <br>plan</h4>
+     <p>monthly <br> subscription</p>
+     <p>N24,890</p>
+     <label for="quaterly_plan">
+       <input id="quaterly_plan" type="radio" name="duration">
+       <span type="button" id="select_but">select</span>
+      </label>
+     <p id="all_perks">Conatains all <a href="">perks</a> of {premium} membership</p>
+    </div>
+
+    <div class="duration yearly">
+     <h4>Monthly <br>plan</h4>
+     <p>monthly <br> subscription</p>
+     <p>N24,890</p>
+     <!-- <button onclick="changecolor(this)" type="button" id="select_but">select</button> -->
+     <label for="yearly_plan">
+       <input id="yearly_plan" type="radio" name="duration">
+       <span type="button" id="select_but">select</span>
+      </label>
+     <!-- <button onclick="changecolor(this)" value="monthly" type="button" id="select_but">select</button> -->
+     <p id="all_perks">Conatains all <a href="">perks</a> of {premium} membership</p>
+    </div>
+
+    </div>
+
+
+<div class="classes">
+  <p >Select classes</p>
+  <p>*You can only select 1 class</p>
+  <div class="kkk">
+  <label>
+    <input id="class1" type="radio" name="clas">
+    <div  id="class_but">Boxing</div>
+   </label>
+
+   <label >
+    <input id="class1" type="radio" name="clas">
+    <div  id="class_but">Mixed Martial Arts (MMA)</div>
+   </label>
+
+   <label >
+    <input id="class1" type="radio" name="clas">
+    <div  id="class_but">CrossFit</div>
+   </label>
+
+   <label>
+    <input id="class1" type="radio" name="clas">
+    <div  id="class_but">Muay Thai</div>
+   </label>
+
+   <label >
+    <input id="class1" type="radio" name="clas">
+    <div  id="class_but">Powerlifting</div>
+   </label>
+
+   <label >
+    <input id="class1" type="radio" name="clas">
+    <div  id="class_but">Self-Defense Training</div>
+   </label>
+
+   <label >
+    <input id="class1" type="radio" name="clas">
+    <div  id="class_but">Pilates</div>
+   </label>
+
+   <label >
+    <input id="class1" type="radio" name="clas">
+    <div  id="class_but">Judo</div>
+   </label>
+
+   <label >
+    <input id="class1" type="radio" name="clas">
+    <div  id="class_but">Yoga</div>
+   </label>
+  </div>
+</div>
+
+    <div class="row buttom_nav">
+     <div class="col-5">
+       <a href=""><button id="exit">exit</button></a>
+     </div>
+   <div class="col-2"></div>
+   <div class="col-5">
+     <a href="{% url 'personaldetails_view' %}"><button id="next">next</button></a>
+   </div>
+
+ </div>
+ </div>
+
+
+   <!-- <div class="buttom_nav">
+    <a href=""><button id="exit">exit</button></a>
+    <a href="/templates/joinus_personaldetails.html"><button id="next">next</button></a>
+   </div> -->
+
+
+
+
+
+
+
+  </main>
+
+  {% endblock %}
+

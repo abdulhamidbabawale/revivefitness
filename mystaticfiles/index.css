@@ -1,0 +1,414 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+main{
+  margin-top: 60px;
+}
+body{
+  background-color: rgba(175, 221, 229,0.7) ;
+}
+
+.stuff{
+  width: 100%;
+  height: 600px;
+}
+.stuff img{
+  width: 100%;
+  height: 600px;
+  object-fit: fill;
+
+}
+.memberships h1{
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+.platinium{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 250px;
+  background-color: #003135;
+  border-radius: 7px;
+  box-shadow: 10px 10px 10px -10px rgb(0, 0, 0);
+}
+.platinium p{
+  color: #AFDDE5;
+  margin-left: 15px;
+}
+.platinium h6{
+  margin-top: 10px;
+ font-size: 25px;
+  color: #AFDDE5;
+  margin-left: 15px;
+}
+.platinium a{
+  margin-left: 15px;
+  color: #0FA4AF;
+
+}
+.price p{
+    color: #0FA4AF;
+  display: inline-block;
+ margin-right:-20px;
+ font-size: 12px;
+}
+#naira{
+  font-size: 20px;
+    color: #0FA4AF;
+}
+.platinium button{
+  width: 90px;
+  background-image: linear-gradient(#0FA4AF,#024950);
+  box-shadow: 10px 10px 10px -10px  black;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.standard{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 250px;
+  background-color: #0FA4AF;
+  border-radius: 7px;
+  box-shadow: 10px 10px 10px -10px rgb(0, 0, 0);
+}
+.standard p{
+  color: #003135;
+  margin-left: 15px;
+
+}
+.standard h6{
+  margin-top: 10px;
+ font-size: 25px;
+  color: #003135;
+  margin-left: 15px;
+}
+.standard a{
+  margin-left: 15px;
+  color: #AFDDE5;
+
+}
+.price2 p{
+  color: #AFDDE5;
+  display: inline-block;
+ margin-right:-20px;
+ font-size: 12px;
+}
+#naira2{
+  font-size: 20px;
+    color: #AFDDE5;
+}
+
+.standard button{
+  width: 90px;
+  box-shadow: 10px 10px 10px -10px  black;
+  background-image: linear-gradient(#0FA4AF,#AFDDE5);
+  border: none;
+  border-radius: 5px;
+  color: #09838c;
+}
+
+.plans{
+  margin:auto;
+  width: 590px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.plan_description{
+  padding-top: 70px;
+  font-size: 14px;
+  margin:auto;
+  width: 570px;
+}
+.benefits{
+  margin-top: 100px;
+  background-color: rgb(15, 164, 175,0.5);
+}
+.descriptive_img{
+  width: 600px;
+  height: 300px;
+  margin: auto;
+}
+.descriptive_img img{
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  object-fit: cover;
+}
+.perks_exp{
+  width: 600px;
+
+}
+.benefits_desciption{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  }
+.benefits_desciption a{
+  color: #0FA4AF;
+
+}
+.benefits{
+  width: 100%;
+}
+@media only screen and (max-width: 1392px){
+  .go_on_mobile{
+    display: none;
+  }
+  .perks_exp{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: auto;
+  }
+  .plans{
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .go_on_mobile{
+    display: none;
+  }
+  .perks_exp{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: auto;
+  }
+  .plans{
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 769px){
+  .stuff{
+    width: 100%;
+    height: 350px;
+  }
+  .stuff img{
+    width: 100%;
+    height: 350px;
+    object-fit: fill;
+
+  }
+  .plans{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+  }
+  .platinium{
+    margin: auto;
+
+  }
+  .standard{
+    margin: auto;
+
+  }
+  .plan_description{
+    width: 100%;
+  }
+  .descriptive_img{
+    width: 100%;
+    height: 300px;
+    margin: auto;
+  }
+  .descriptive_img img{
+    width:100%;
+    height: 300px;
+    margin: auto;
+    object-fit: cover;
+  }
+  .go_on_mobile{
+    display: none;
+  }
+  .perks_exp{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    margin: auto;
+  }
+  .benefits_desciption{
+    display: flex;
+    flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 571px){
+  .plans{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .inside_plan{
+    height: 50px;
+    font-size: 12px;
+  }
+  .platinium{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+
+  }
+  .standard{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 200px;
+    margin: auto;
+
+  }
+  .plans a{
+    font-size: 11px;
+  }
+  .standard button{
+    height: 20px;
+    width: 70px;
+    margin-right: 15px;
+
+
+  }
+  .platinium button{
+    height: 20px;
+    width: 70px;
+    margin-right: 15px;
+  }
+}
+@media only screen and (max-width: 481px){
+  .stuff{
+    width: 100%;
+    height: 250px;
+  }
+  .stuff img{
+    width: 100%;
+    height: 250px;
+    object-fit: fill;
+
+  }
+
+  .plans{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+  .plans a{
+    font-size: 10px;
+  }
+  .plan_description{
+    padding-top: 70px;
+    font-size: 14px;
+    width: 100%;
+  }
+  .platinium{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 20px;
+
+  }
+  .standard{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 150px;
+    margin: auto;
+
+  }
+  .inside_plan{
+    height: 50px;
+    font-size: 10px;
+  }
+  .standard button{
+    height: 20px;
+    width: 70px;
+    margin-right: 15px;
+
+
+  }
+  .platinium button{
+    height: 20px;
+    width: 70px;
+    margin-right: 15px;
+  }
+  .descriptive_img{
+    width: 300px;
+    height: 200px;
+    margin: auto;
+  }
+  .descriptive_img img{
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    object-fit: cover;
+  }
+  .perks_exp{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 300px;
+    margin: auto;
+  }
+  .go_on_mobile{
+    display: none;
+  }
+}
+@media only screen and (max-width: 342px){
+  .plans{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .plans h6{
+    font-size: 17px;
+  }
+  .plans p{
+    font-size: 15px;
+  }
+  .plans a{
+    font-size: 11px;
+  }
+  .inside_plan{
+    height: 30px;
+    font-size: 10px;
+  }
+  .inside_plan p{
+    font-size: 10px;
+  }
+  .platinium{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 140px;
+    margin: auto;
+    margin-bottom: 20px;
+
+  }
+  .standard{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 140px;
+    margin: auto;
+
+  }
+  .learn_signup{
+margin-top: 30px;
+  }
+  .price p{
+    font-size: 10px;
+
+  }
+  #naira{
+    font-size: 18px;
+  }
+  .price2 p{
+    font-size: 10px;
+
+  }
+  #naira2{
+    font-size: 18px;
+  }
+}

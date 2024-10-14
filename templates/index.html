@@ -1,0 +1,217 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static 'index.css' %}">
+
+
+<main >
+  <!--carousel-->
+  <div class="container">
+    <div class="swiper">
+      <div class="carousel">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="stuff">
+              <!-- <img src="/mystaticfiles/gymsite.jpeg"> -->
+              <img src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727024040/revive%20fitness/m64v8tb2npjmecyjpdps.jpg" alt="">
+
+            </div>
+
+          </div>
+
+          <div class="swiper-slide">
+            <div class="stuff">
+              <img
+                src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727024066/revive%20fitness/pkd7ld0ilc7ow87njktn.jpg">
+
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="stuff">
+              <img src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727025050/revive%20fitness/fxcnteczulshqdyiurvb.png">
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+  </div>
+  <!--carousel-->
+  <!-- membership plans -->
+  <div class="container-fluid memberships">
+    <h1>MEMBERSHIPS</h1>
+    <div class="row plans">
+      <div class="col">
+        <div class="platinium">
+          <h6>Platinium</h6>
+          <p>Starting at</p>
+          <span class="price">
+            <p id="naira">₦41,890</p>
+            <p>/mo</p>
+          </span>
+<div class="inside_plan">
+          <p>Gives you access to any branch,unlimited workout classes,and so much more</p>
+        </div>
+          <div class="row learn_signup">
+            <div class="col"> <a href="">Learn More</a></div>
+            <div class="col"> <a href=""> <button>Sign up</button></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col go_on_mobile"></div>
+      <div class="col">
+        <div class="standard">
+          <h6>Standard</h6>
+          <p>Starting at</p>
+          <span class="price2">
+            <p id="naira2">₦24,890</p>
+            <p>/mo</p>
+          </span>
+          <div class="inside_plan">
+          <p>Unlimited access to your registered branch and one class per month</p>
+          </div>
+          <div class="row learn_signup">
+            <div class="col"> <a href="">Learn More</a></div>
+            <div class="col"> <a href=""> <button>Sign up</button></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="plan_description">
+      <p>Explore fitness freedom with our standard and premium gym memberships. Our standard membership begins at 24,890
+        per month, offering access to your registered branch and one training class monthly. Opt for our premium
+        membership starting at 41,000 per month for unlimited access to all branches, a personal trainer, and the
+        freedom to attend any training class. Elevate your fitness journey with us today</p>
+
+    </div>
+
+  </div>
+  <!-- membership plans -->
+
+  <!-- benefits/perks -->
+  <div class="benefits">
+    <div class="container">
+      <div class="row first_benefit benefits_desciption">
+        <div class="col">
+          <div class="descriptive_img">
+            <img src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727024690/revive%20fitness/xev7hrhciqivlzgezdgs.jpg" alt="">
+          </div>
+        </div>
+        <div class="col go_on_mobile"></div>
+        <div class="col">
+          <div class="perks_exp">
+            <h5>Modern and high quality gym equipment</h5>
+            <p>Enjoy unlimited access to high-quality and modern workout equipment with either of our membership
+              options.
+              Whether you choose our standard or premium membership, you'll have everything you need to achieve your
+              fitness goals. Join us and experience the difference today!</p>
+            <a href="">Sign up</a>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row second_benefit benefits_desciption">
+        <div class="col">
+          <div class="perks_exp">
+            <h5>Discover Our Dynamic Training Classes</h5>
+            <p>Engage in our diverse range of training classes designed to elevate your fitness journey. From strength
+              training to yoga and everything in between, our expert instructors are here to guide and inspire you.
+              Whether you're a beginner or a seasoned athlete, there's a class for everyone. Explore new challenges,
+              improve your skills, and achieve your fitness goals with us.</p>
+            <a href="">Sign up</a>
+          </div>
+        </div>
+        <div class="col go_on_mobile"></div>
+        <div class="col">
+          <div class="descriptive_img">
+            <img src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727024689/revive%20fitness/uxfptwv7nqyoyaknhsky.jpg">
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row third_benefit benefits_desciption">
+        <div class="col">
+          <div class="descriptive_img">
+            <img src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727025492/revive%20fitness/bpieqkl3mmturnosiilv.jpg">
+          </div>
+        </div>
+        <div class="col go_on_mobile"></div>
+        <div class="col">
+          <div class="perks_exp">
+            <h5>Unlock Exclusive Benefits with Our Premium Membership</h5>
+            <p>Experience fitness at its finest with our premium membership, offering unparalleled perks designed to
+              elevate your workout regimen. Enjoy unlimited access to all branches, personalized guidance from a
+              dedicated
+              personal trainer, and the freedom to attend any of our diverse training classes. Dive into a world of
+              comprehensive fitness solutions tailored to meet your goals. Discover more about how our premium
+              membership
+              can enhance your fitness journey today.</p>
+            <a href="">Sign up</a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row fourth_benefit benefits_desciption">
+        <div class="col">
+          <div class="perks_exp">
+            <h5>Join Us Nationwide: Sign Up from Any State</h5>
+            <p>No matter where you are in Nigeria, you can join our community of fitness enthusiasts with ease. With
+              branches in all 36 states across the country, you're never far from achieving your fitness goals. Sign up
+              today and start your journey to a healthier lifestyle with us.</p>
+            <a href="">Sign up</a>
+          </div>
+        </div>
+        <div class="col go_on_mobile"></div>
+        <div class="col">
+          <div class="descriptive_img">
+            <img src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727025394/revive%20fitness/ttfgdg2b0ak0sthlidlo.jpg">
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row fifth_benefit benefits_desciption">
+        <div class="col">
+          <div class="descriptive_img">
+            <img src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727023933/revive%20fitness/hfccvmyi2f2j9cxyfaem.jpg">
+          </div>
+        </div>
+        <div class="col go_on_mobile"></div>
+        <div class="col">
+          <div class="perks_exp">
+            <h5>Meet Our Expert Personal Trainers</h5>
+            <p>Our gym is proud to feature highly educated and professional personal trainers who are dedicated to
+              helping
+              you achieve your fitness goals. With their expertise and personalized guidance, you can expect tailored
+              workout plans, motivation, and support every step of the way. Whether you're aiming to build strength,
+              improve endurance, or enhance flexibility, our trainers are here to inspire and assist you on your fitness
+              journey.</p>
+            <a href="">Sign up</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</main>
+
+
+
+
+
+
+  <script src="{% static 'index.js'%}"></script>
+
+
+{% endblock %}

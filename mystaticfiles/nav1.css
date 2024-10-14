@@ -1,0 +1,344 @@
+@media only screen and (max-width: 480px){
+  .hide_on_mobile{
+    display: none;
+
+       }
+       nav{
+
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #024950;
+      }
+      .sidebar i{
+        font-size: 40px;
+        margin-top: 9px;
+
+      }
+      .sidebar a{
+        padding-bottom:10px ;
+        margin-left: 20px;
+      }
+      .sidebar{
+        position: fixed;
+        /* top: 0; */
+        /* right: 0; */
+        left: 0;
+        /* height: 100vh; */
+        height: 300px;
+        width: 250px;
+        z-index: 999;
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 10px rgba(0, 0, 0,0.2);
+        background-color: #024950;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+      }
+      .sidebar li{
+        width: 100%;
+      }
+      #cancel{
+        position: absolute;
+        margin-top: -27px;
+        margin-left:-62px;
+        display: none;
+        /* display: flex;
+        justify-content: flex-start; */
+        font-size: 40px;
+      }
+      #btn{
+        position: absolute;
+        margin-top: -27px;
+        margin-left:-20px;
+        /* display: flex;
+        justify-content: flex-start; */
+        font-size: 40px;
+      }
+
+      /* .nav_links{ */
+        /* margin-left: 300px; */
+        /* display:inline-block; */
+        /* text-align: center; */
+      /* } */
+      .nav_links li{
+        list-style: none;
+
+      }
+
+      .gym_logo{
+        display: flex;
+        justify-content:flex-start;
+        position: absolute;
+        height: 40px;
+        width:190px;
+        margin-top: -30px;
+        margin-left: 40px;
+      }
+      .gym_logo img{
+        opacity: 0.7;
+        /* margin-left: -5px; */
+        /* margin-top: -40px; */
+        display: flex;
+        justify-content:flex-start;
+        height: 40px;
+        width: 190px;
+        /* width: 230px; */
+      }
+
+      .nav_links a {
+       display:inline-block;
+       padding-left: 20px;
+       padding-right: 20px;
+       text-decoration: none;
+       color: #0FA4AF;
+
+      }
+      .login_join a {
+        display: inline-block;
+      }
+      .login_join {
+        float: right;
+
+
+      }
+      .join_style {
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-image: linear-gradient(#0FA4AF,#024950);
+        width: 100px;
+        box-shadow: 10px 10px 10px -10px rgb(0, 0, 0);
+        border-radius: 5px;
+      }
+      .join_style a{
+        color: black;
+
+      }
+}
+@media only screen and (min-width: 768px){
+   .hide_on_mobile{
+display: none;
+
+   }
+  nav{
+
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #024950;
+  }
+  .sidebar i{
+    font-size: 40px;
+    margin-top: 9px;
+
+  }
+  .sidebar a{
+    padding-bottom:10px ;
+    margin-left: 20px;
+  }
+  .sidebar{
+    position: fixed;
+    /* top: 0; */
+    /* right: 0; */
+    left: 0;
+    /* height: 100vh; */
+    height: 300px;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0,0.2);
+    background-color: #024950;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  #cancel{
+    position: absolute;
+    margin-top: -27px;
+    margin-left:-62px;
+    display: none;
+    /* display: flex;
+    justify-content: flex-start; */
+    font-size: 40px;
+  }
+  #btn{
+    position: absolute;
+    margin-top: -27px;
+    margin-left:-20px;
+    /* display: flex;
+    justify-content: flex-start; */
+    font-size: 40px;
+  }
+
+  /* .nav_links{ */
+    /* margin-left: 300px; */
+    /* display:inline-block; */
+    /* text-align: center; */
+  /* } */
+  .nav_links li{
+    list-style: none;
+
+  }
+
+  .gym_logo{
+    display: flex;
+    justify-content:flex-start;
+    position: absolute;
+    height: 40px;
+    width:190px;
+    margin-top: -30px;
+    margin-left: 40px;
+  }
+  .gym_logo img{
+    opacity: 0.7;
+    /* margin-left: -5px; */
+    /* margin-top: -40px; */
+    display: flex;
+    justify-content:flex-start;
+    height: 40px;
+    width: 190px;
+    /* width: 230px; */
+  }
+
+  .nav_links a {
+   display:inline-block;
+   padding-left: 20px;
+   padding-right: 20px;
+   text-decoration: none;
+   color: #0FA4AF;
+
+  }
+  .login_join a {
+    display: inline-block;
+  }
+  .login_join {
+    float: right;
+
+
+  }
+  .join_style {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: linear-gradient(#0FA4AF,#024950);
+    width: 100px;
+    box-shadow: 10px 10px 10px -10px rgb(0, 0, 0);
+    border-radius: 5px;
+  }
+  .join_style a{
+    color: black;
+
+  }
+  /* label #btn,
+  label #cancel{
+    cursor: pointer;
+  } */
+/* label #btn{
+  display: block;
+
+} */
+/* .left_nav{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #c76f21;
+  top: 80px;
+  text-align: center;
+  left: 0;
+} */
+/* .left_nav a li{
+  display: block;
+  margin: 50px 0;
+
+} */
+}
+
+@media only screen and (min-width: 1024px){
+  .hide_on_mobile{
+    display: block;
+
+       }
+       #btn{
+        display: none;
+       }
+  nav{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #024950;
+  }
+  .nav_links{
+    /* margin-left: 300px; */
+    /* display:inline-block; */
+    /* text-align: center; */
+  }
+  .nav_links li{
+    list-style: none;
+
+  }
+  .gym_logo{
+    /* margin-right: auto; */
+    display: flex;
+    justify-content:flex-start;
+    position: absolute;
+    height: 40px;
+    /* width:230px; */
+    width:10vw;
+    /* margin-left: -10px; */
+    /* margin-top: 910px; */
+  }
+  .gym_logo img{
+    opacity: 0.7;
+    /* margin-left: -10px; */
+    margin-top: -6px;
+    display: flex;
+    justify-content:flex-start;
+    height: 40px;
+    /* width: 230px; */
+    width:10vw;
+  }
+/* .left_nav{
+  margin-left: 1;
+} */
+  .nav_links a {
+   display:inline-block;
+   /* padding-left: 1vw;
+   padding-right: 1vw; */
+   padding-left: 20px;
+   padding-right: 20px;
+   text-decoration: none;
+   color: #0FA4AF;
+
+  }
+  .left_nav{
+    margin-left:140px ;
+  }
+
+  .login_join {
+    float: right;
+  }
+  .join_style {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: linear-gradient(#0FA4AF,#024950);
+    width: 100px;
+    box-shadow: 10px 10px 10px -10px rgb(0, 0, 0);
+    border-radius: 5px;
+  }
+  .join_style a{
+    color: black;
+
+  }
+  #btn{
+    display: none;
+  }
+}

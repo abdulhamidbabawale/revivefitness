@@ -1,0 +1,259 @@
+body{
+background-color: rgb(175, 221, 229,0.5);
+}
+.login_box{
+  padding-top: 20px;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+}
+.login_box h5{
+  margin: auto;
+  /* font-size: 20px; */
+  margin-bottom: 8px;
+  width:fit-content;
+
+}
+.logo{
+  margin: auto;
+  width:120px;
+}
+.logo img{
+  margin: auto;
+  /* width:250px; */
+  width: 120px;
+}
+ input{
+  height: 40px;
+  width: 300px;
+  background: none ;
+  margin-bottom: 30px;
+  border: solid 1px #0FA4AF ;
+  border-radius: 15px;
+ }
+
+ form a{
+  color: #0FA4AF;
+  text-decoration: none;
+  margin-left: 160px;
+
+
+
+ }
+ input::placeholder{
+  color: rgba(0, 0, 0,0.5);
+  padding-left: 20px;
+  font-size: 15px;
+ }
+
+#signin_button{
+  box-shadow: 10px 10px 17px -12px  black;
+  /* width: 150px; */
+  width: 100%;
+  height: 40px;
+  display: block;
+  margin: auto;
+margin-bottom: 10px;
+  background-color: #0FA4AF;
+  border: none;
+  border-radius: 15px;
+  color: #ffffff;
+
+ }
+ .no_acc a{
+  color: #0FA4AF;
+ }
+ .no_acc p{
+  text-align: center;
+  display: inline-block;
+ }
+ ul{
+  padding: 0;
+  text-decoration: none;
+  margin: auto;
+ }
+
+.login_box  li{
+  text-decoration: none;
+  color: rgba(0, 0, 0,0.5);
+  display: inline-block;
+   padding: 10px;
+ }
+ button[type="submit"]:hover {
+  background-color: #076a71 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .set_password{
+  border-radius: 13px;
+  width: fit-content;
+  margin: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #003135;
+
+} */
+
+/* .blur{
+  filter: blur(2px);
+} */
+.set_password h5{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* color: #AFDDE5; */
+}
+  .login_boxx{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+  }
+  a{
+    text-decoration: none;
+    padding: 0%;
+    margin: 0;
+  }
+  .dowm-nav  li {
+    padding: 0%;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    color: rgba(0, 0, 0,0.5);
+    white-space: nowrap;
+    /* display: inline-block; */
+     padding: 10px;
+   }
+  /* .login_box h5{
+    margin: auto;
+    font-size: 20px;
+    margin-bottom: 8px;
+    width:fit-content;
+
+  } */
+  .set_password .logo{
+    margin: auto;
+    width:100px;
+  }
+  .set_password .logo img{
+    margin: auto;
+    width:100px;
+  }
+  .dowm-nav .logo2 img{
+    margin: auto;
+    /* width:100px; */
+    width: 100px;
+  }
+  .dowm-nav .logo2 {
+    margin: auto;
+    /* width:100px; */
+    width: 100px;
+  }
+  .set_password input{
+    height: 40px;
+    width: 300px;
+    background: none ;
+    margin-bottom: 30px;
+    border: solid 1px #0FA4AF ;
+    border-radius: 15px;
+   }
+
+   .set_password .login_box form a{
+    color: #0FA4AF;
+    text-decoration: none;
+    margin-left: 180px;
+
+
+   }
+ form {
+    width: 300px;
+    margin: auto;
+   }
+   .set_password input::placeholder{
+    /* color: #AFDDE5; */
+    padding-left: 20px;
+    font-size: 15px;
+   }
+
+   #signin_buttonn{
+    box-shadow: 10px 10px 17px -12px  black;
+    /* width: 150px; */
+    width: 100%;
+    height: 40px;
+    display: block;
+    margin: auto;
+    background-color: #0FA4AF;
+    border: none;
+    border-radius: 15px;
+    color: #ffffff;
+
+   }
+.dowm-nav{
+  margin-left: 10px;
+  /* margin: auto; */
+  /* display: flex;
+  justify-self: center; */
+}
+
+   .set_password button[type="submit"]:hover {
+    background-color: #076a71 !important;
+  }
+  @media only screen and (max-width: 481px){
+    /* h5{
+      font-size: 1px;
+    } */
+    .login_box .logo{
+      margin: auto;
+      width:80px;
+    }
+    .login_box .logo img{
+      margin: auto;
+      width:80px;
+    }
+    .set_password .logo{
+      margin: auto;
+      width:70px;
+    }
+    .set_password .logo img{
+      margin: auto;
+      width:70px;
+    }
+    .dowm-nav  li {
+   font-size: 10px;
+   /* padding: 0; */
+     }
+     .dowm-nav .logo2 img{
+      margin: auto;
+      /* width:100px; */
+      width: 50%;
+    }
+    .dowm-nav .logo2 {
+      margin: auto;
+      /* width:100px; */
+      width: 50%;
+    }
+    .dowm-nav{
+
+      margin-left: 0;
+      /* margin: auto; */
+      /* display: flex;
+      justify-self: center; */
+    }
+    .no_acc{
+      font-size: 12px;
+    }
+    #no_pass{
+      font-size: 12px;
+      margin-left: 180px !important;
+    }
+
+  }

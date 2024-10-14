@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+background-color: rgb(175, 221, 229,0.5);
+}
+
+.form_box{
+  width: 570px;
+  margin: auto;
+}
+.note_checkbox{
+  display: inline-flex;
+}
+#jjj{
+  margin-top: -16px;
+}
+input[type="checkbox"]{
+  transform: scale(1.5);
+  margin-right: 40px;
+}
+input[type="checkbox"]:checked{
+  accent-color: #0FA4AF;
+}
+
+
+.note_checkbox input[type="checkbox"]{
+  margin-top: 9px;
+  margin-bottom: auto;
+
+}
+input,select{
+  height: 60px;
+}
+
+input:hover ,select:hover{
+border: solid 1px #0FA4AF;
+}
+input[type="date"]::-webkit-calender-picker-indicator{
+color: red;
+opacity: 0.5;
+}
+.form-control,.form-select{
+background: rgba(175, 221, 229,0.4);
+border: none;
+
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="date"]:focus{
+  background: rgba(175, 221, 229,0.4);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus
+{
+  transition: background-color 600000s 0s, color 600000s 0s ;
+
+}
+
+fieldset{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.details{
+  margin-top: 20px;
+}
+.Address_Branch{
+  margin-top: 90px;
+}
+#dim{
+  font-weight: 100;
+}
+.custom-opacity {
+  opacity: 0.5; /* Adjust opacity as needed */
+}
+.custom-opacity:disabled {
+  opacity: 0.5; /* Ensure opacity is consistent when disabled */
+}
+option{
+padding-left: 600px;
+}
+@media only screen and (max-width: 481px){
+  .form_box{
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+
+
+
+
+
+
+
+

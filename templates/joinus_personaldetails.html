@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+  <link rel="stylesheet" href="{% static 'joinus_personaldetails.css'%}">
+  <link rel="stylesheet" href="{% static 'joinus_nav.css'%}">
+
+
+  {% block nav %}
+
+  {% endblock %}
+  <main class="container">
+    <div class=" mm">
+      <div class="row top">
+        <div class="col oo">
+          <div class="num">
+            <p>1</p>
+          </div>
+          <li>plan duration</li>
+        </div>
+        <div class="col line">
+          <hr>
+        </div>
+        <div class="col oo">
+          <div class="num set_page_progress">
+            <p>2</p>
+          </div>
+          <li>personal details</li>
+        </div>
+        <div class="col line">
+          <hr>
+        </div>
+        <div class="col oo">
+          <div class="num">
+            <p>3</p>
+          </div>
+          <li>payment</li>
+        </div>
+        <div class="col line">
+          <hr>
+        </div>
+        <div class="col oo">
+          <div class="num">
+            <p>4</p>
+          </div>
+          <li>checkout</li>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid form_box">
+      <h3>Enter your personal info</h3>
+      <h5>Tell us a little bit about yourself to get started.</h5>
+      <form class="needs-validation" action="" novalidate>
+        <div class="details">
+          <p>Personal Details</p>
+
+          <fieldset>
+            <input class="form-control " type="text" placeholder="First name" required>
+            <div class="invalid-feedback">
+              This field is required
+            </div>
+          </fieldset>
+          <fieldset>
+            <input class="form-control" type="text" placeholder="Last name" required>
+            <div class="invalid-feedback">
+              This field is required
+            </div>
+          </fieldset>
+          <fieldset>
+            <input class="form-control" type="text" placeholder="Date of birth" onfocus="this.type='date'" onblur="this.type='text'" required>
+            <div class="invalid-feedback">
+              This field is required
+            </div>
+          </fieldset>
+          <fieldset>
+            <input class="form-control" type="number" placeholder="phone number" required>
+            <div class="invalid-feedback">
+              This field is required
+            </div>
+          </fieldset>
+          <fieldset>
+            <input class="form-control" type="email" placeholder="Email" required>
+            <div class="invalid-feedback">
+              This field is required
+            </div>
+          </fieldset>
+            <select class="form-select"  required>
+              <option selected hidden disabled id="gender">gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+
+            </select>
+            <div class="invalid-feedback">
+              This field is required
+            </div>
+
+
+        </div>
+        <div class="Address_Branch">
+          <p>Address/Branch</p>
+          <fieldset>
+            <input class="form-control" type="text" placeholder="Address line" required>
+            <div class="invalid-feedback">
+              This field is required
+            </div>
+          </fieldset>
+          <fieldset>
+            <input class="form-control" type="text" placeholder="City" required>
+            <div class="invalid-feedback">
+              This field is required
+            </div>
+          </fieldset>
+
+          <p id="dim">input the state you are currently located at</p>
+          <fieldset>
+            <input class="form-control" type="text" placeholder="state" required>
+            <div class="invalid-feedback">
+              This field is required
+            </div>
+          </fieldset>
+
+
+        </div>
+
+        <p id="dim">Note that the state that you inputed will be used as the branch of the gym</p>
+        <div class="note_checkbox">
+          <input id="jjj" type="checkbox" checked>
+          <p>To stay updated on your membership, branch news, and special offers at Revive Fitness, please check the box
+            beside this text to opt in for occasional emails and notifications. This will ensure you receive the latest
+            updates directly in your inbox.</p>
+
+        </div>
+
+
+          <div class="row buttom_nav">
+            <div class="col-5">
+              <a href=""><button id="exit">exit</button></a>
+            </div>
+          <div class="col-2"></div>
+          <div class="col-5">
+            <a href="setpassword.html"><button id="next">next</button></a>
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    (() => {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+{% endblock %}
+

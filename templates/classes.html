@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<style>
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #AFDDE5;
+    /* color: #000; */
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .swiper-pagination-bullet-active {
+    color: #AFDDE5;
+    /* background: #007aff; */
+    background: #0FA4AF;
+  }
+  .pagination_style{
+    margin-top: 50px;
+  }
+</style>
+<link rel="stylesheet" href="{% static 'classes.css' %}">
+
+
+
+
+  <main>
+    <div class="header_img">
+      <div class="container">
+        <div class="descriptive_text">
+          <h4>Start your fitness journey</h4>
+          <p>At Revive Fitness, our state-of-the-art facilities and expert personal trainers are here to help you
+            achieve your fitness goals with top-notch equipment and tailored support.</p>
+
+        </div>
+      </div>
+      <img src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727024504/revive%20fitness/sqdqqll78nwzqtnzwb9j.jpg" alt="">
+    </div>
+    <div class="container">
+      <div class="class_section">
+        <p>Our classes</p>
+        <p>We provide training classes with all our memberships, ensuring you have access to a variety of fitness
+          options. For those seeking personalized guidance, our Platinum membership includes one-on-one sessions with
+          our expert personal trainers to help you achieve your goals more effectively.</p>
+      </div>
+
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="specific_class">
+              <div class="class_img">
+                <img src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727024262/revive%20fitness/rvygrn2pi1x7ag79g6sg.jpg" alt="">
+              </div>
+              <p>Boxing</p>
+              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
+                coordination, all while offering a fun and empowering experience.</p>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="specific_class">
+              <div class="class_img">
+                <img src="/mystaticfiles/pexels-cottonbro-4761594.jpg" alt="">
+              </div>
+              <p>Boxing</p>
+              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
+                coordination, all while offering a fun and empowering experience.</p>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="specific_class">
+              <div class="class_img">
+                <img src="/mystaticfiles/pexels-cottonbro-4761594.jpg" alt="">
+              </div>
+              <p>Boxing</p>
+              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
+                coordination, all while offering a fun and empowering experience.</p>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="specific_class">
+              <div class="class_img">
+                <img src="/mystaticfiles/pexels-cottonbro-4761594.jpg" alt="">
+              </div>
+              <p>Boxing</p>
+              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
+                coordination, all while offering a fun and empowering experience.</p>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="specific_class">
+              <div class="class_img">
+                <img src="/mystaticfiles/pexels-cottonbro-4761594.jpg" alt="">
+              </div>
+              <p>Boxing</p>
+              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
+                coordination, all while offering a fun and empowering experience.</p>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="specific_class">
+              <div class="class_img">
+                <img src="/mystaticfiles/pexels-cottonbro-4761594.jpg" alt="">
+              </div>
+              <p>Boxing</p>
+              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
+                coordination, all while offering a fun and empowering experience.</p>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="specific_class">
+              <div class="class_img">
+                <img src="/mystaticfiles/pexels-cottonbro-4761594.jpg" alt="">
+              </div>
+              <p>Boxing</p>
+              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
+                coordination, all while offering a fun and empowering experience.</p>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="specific_class">
+              <div class="class_img">
+                <img src="/mystaticfiles/pexels-cottonbro-4761594.jpg" alt="">
+              </div>
+              <p>Boxing</p>
+              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
+                coordination, all while offering a fun and empowering experience.</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="pagination_style">
+        <div class="swiper-pagination "></div>
+      </div>
+      </div>
+      <hr>
+      <div class="we_offer">
+        <div class="we_offer_card">
+          <div class="we_offer_box">
+            <p>We offer</p>
+            <p>Personal training</p>
+            <p>Upgrade to Platinum now!</p>
+          </div>
+          <img src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727024504/revive%20fitness/nxx3jm5q6tmjrmrj1a25.jpg" alt="">
+        </div>
+        <p id="we_offer_text">Our Platinum membership includes access to dedicated personal trainers who provide
+          customized workout plans, one-on-one coaching, and ongoing support. Benefits include personalized fitness
+          assessments, tailored goal setting, and expert guidance to maximize your results and ensure you stay
+          motivated.</p>
+      </div>
+    </div>
+  </main>
+
+
+  <script>
+    var swiper = new Swiper('.mySwiper', {
+
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
+      mousewheel: true,
+      keyboard: true,
+      loop: true,
+
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+          spaceBetween: 5,
+        },
+
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1400: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+  </script>
+
+
+{% endblock %}
