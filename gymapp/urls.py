@@ -21,6 +21,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("",include('app.brows_site.urls')),
     # path("",include('app.site_data.urls')),
-    # path("login/",include('app.login_auth.urls')),
+    path("auth/",include('app.login_auth.urls')),
     path("joinus/",include('app.joinus_auth.urls')),
 ]
