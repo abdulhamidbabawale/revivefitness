@@ -1,6 +1,3 @@
-body{
-background-color: rgb(175, 221, 229,0.5);
-}
 .login_box{
   padding-top: 20px;
   width: fit-content;
@@ -9,7 +6,6 @@ background-color: rgb(175, 221, 229,0.5);
 }
 .login_box h5{
   margin: auto;
-  /* font-size: 20px; */
   margin-bottom: 8px;
   width:fit-content;
 
@@ -20,14 +16,13 @@ background-color: rgb(175, 221, 229,0.5);
 }
 .logo img{
   margin: auto;
-  /* width:250px; */
   width: 120px;
 }
  input{
   height: 40px;
   width: 300px;
   background: none ;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border: solid 1px #0FA4AF ;
   border-radius: 15px;
  }
@@ -48,7 +43,6 @@ background-color: rgb(175, 221, 229,0.5);
 
 #signin_button{
   box-shadow: 10px 10px 17px -12px  black;
-  /* width: 150px; */
   width: 100%;
   height: 40px;
   display: block;
@@ -93,23 +87,11 @@ margin-bottom: 10px;
 
 
 
-/* .set_password{
-  border-radius: 13px;
-  width: fit-content;
-  margin: auto;
-  padding-left: 100px;
-  padding-right: 100px;
-  background-color: #003135;
 
-} */
 
-/* .blur{
-  filter: blur(2px);
-} */
 .set_password h5{
   margin-top: 10px;
   margin-bottom: 10px;
-  /* color: #AFDDE5; */
 }
   .login_boxx{
     padding-top: 30px;
@@ -130,16 +112,9 @@ margin-bottom: 10px;
     list-style: none;
     color: rgba(0, 0, 0,0.5);
     white-space: nowrap;
-    /* display: inline-block; */
      padding: 10px;
    }
-  /* .login_box h5{
-    margin: auto;
-    font-size: 20px;
-    margin-bottom: 8px;
-    width:fit-content;
 
-  } */
   .set_password .logo{
     margin: auto;
     width:100px;
@@ -150,19 +125,17 @@ margin-bottom: 10px;
   }
   .dowm-nav .logo2 img{
     margin: auto;
-    /* width:100px; */
     width: 100px;
   }
   .dowm-nav .logo2 {
     margin: auto;
-    /* width:100px; */
     width: 100px;
   }
   .set_password input{
     height: 40px;
     width: 300px;
     background: none ;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border: solid 1px #0FA4AF ;
     border-radius: 15px;
    }
@@ -179,14 +152,12 @@ margin-bottom: 10px;
     margin: auto;
    }
    .set_password input::placeholder{
-    /* color: #AFDDE5; */
     padding-left: 20px;
     font-size: 15px;
    }
 
    #signin_buttonn{
     box-shadow: 10px 10px 17px -12px  black;
-    /* width: 150px; */
     width: 100%;
     height: 40px;
     display: block;
@@ -199,18 +170,12 @@ margin-bottom: 10px;
    }
 .dowm-nav{
   margin-left: 10px;
-  /* margin: auto; */
-  /* display: flex;
-  justify-self: center; */
 }
 
    .set_password button[type="submit"]:hover {
     background-color: #076a71 !important;
   }
   @media only screen and (max-width: 481px){
-    /* h5{
-      font-size: 1px;
-    } */
     .login_box .logo{
       margin: auto;
       width:80px;
@@ -229,24 +194,18 @@ margin-bottom: 10px;
     }
     .dowm-nav  li {
    font-size: 10px;
-   /* padding: 0; */
      }
      .dowm-nav .logo2 img{
       margin: auto;
-      /* width:100px; */
       width: 50%;
     }
     .dowm-nav .logo2 {
       margin: auto;
-      /* width:100px; */
       width: 50%;
     }
     .dowm-nav{
 
       margin-left: 0;
-      /* margin: auto; */
-      /* display: flex;
-      justify-self: center; */
     }
     .no_acc{
       font-size: 12px;
