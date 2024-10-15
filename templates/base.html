@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
-<body>
+<body style=" background-color: rgba(175, 221, 229,0.7) ;">
   {% block nav %}
   <nav>
     <div class="container">
@@ -37,10 +37,10 @@
           <a  href="{% url 'home_view' %}" class="{% if active_page == 'home' %}active{% endif %}">
             <li class="hide_on_mobile">Home</li>
           </a>
-          <a href="{% url 'home_view' %}">
+          <a href="{% url 'membership_view' %}" class="{% if active_page == 'membership' %}active{% endif %}">
             <li class="hide_on_mobile">Membership</li>
           </a>
-          <a href="abutus.html">
+          <a href="{% url 'aboutus_view' %}" class="{% if active_page == 'aboutus' %}active{% endif %}">
             <li class="hide_on_mobile">About us</li>
           </a>
           <a href="{% url 'classes_view' %}" class="{% if active_page == 'classes' %}active{% endif %}">
@@ -51,16 +51,16 @@
           </a> -->
         </span>
         <span class="sidebar hide_on_big">
-          <a  href="{% url 'home_view' %}">
+          <a  href="{% url 'home_view' %}" class="{% if active_page == 'home' %}active{% endif %}">
             <li>Home</li>
           </a>
-          <a href="/templates/membership.html">
+          <a href="{% url 'membership_view' %}" class="{% if active_page == 'membership' %}active{% endif %}">
             <li>Membership</li>
           </a>
-          <a href="">
+          <a href="{% url 'aboutus_view' %}" class="{% if active_page == 'aboutus' %}active{% endif %}">
             <li>About us</li>
           </a>
-          <a href="{% url 'classes_view' %}">
+          <a href="{% url 'classes_view' %}" class="{% if active_page == 'classes' %}active{% endif %}">
             <li>Classes</li>
           </a>
 
@@ -70,12 +70,12 @@
     </div> -->
         <span class="login_join">
           <span class="login_style">
-            <a href="login.html">
+            <a href="{% url 'login_view' %}">
               <p>Login</p>
             </a>
           </span>
           <span class="join_style">
-            <a class="join" href="joinus_plan.html">
+            <a class="join" href="{% url 'joinus_plan_view' %}">
               <p>Join us</p>
             </a>
           </span>
@@ -93,7 +93,7 @@
 
 
 
-
+  {% block footer %}
   <footer class="footer">
     <div class="container-fluid">
       <div class="container">
@@ -146,6 +146,7 @@
       </div>
     </div>
   </footer>
+  {% endblock %}
 
   <script src="{% static 'nav.js'%}"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
