@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+  <link rel="stylesheet" href="{% static 'aboutus.css'%}">
+
+
+  <main class="container">
+    <div class="about_img">
+      <img src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727023954/revive%20fitness/scv6nzojduu8d6om6iqp.jpg" alt="">
+    </div>
+    <div class="go_down">
+      <h2>Welcome to Revive Fitness</h2>
+      <p>Founded in 2023, Revive Fitness is Nigeria's premier destination for fitness enthusiasts seeking top-notch
+        training and wellness solutions. With a passion for promoting healthy lifestyles and achieving fitness goals, we
+        have expanded rapidly and now have branches across the country, ensuring that our members have access to our
+        world-class facilities and services no matter where they are.</p>
+    </div>
+    <div class="go_down">
+      <h2>Our Mission</h2>
+      <p>Our mission at Revive Fitness is to inspire and empower individuals to lead healthier lives through
+        comprehensive fitness programs, exceptional customer service, and a supportive community. We are dedicated to
+        helping you achieve your fitness goals, whether you're just starting out or are a seasoned athlete.</p>
+    </div>
+    <div class="go_down">
+      <h2>What We Offer</h2>
+      <p>At Revive Fitness, we provide a range of services and memberships tailored to suit various fitness needs and
+        preferences:</p>
+      <ul>
+        <li><strong>Training Classes:</strong> Our diverse range of training classes includes yoga, pilates, strength
+          training, cardio, and more. Each class is designed to cater to different fitness levels and preferences,
+          ensuring that everyone can find a suitable option.</li>
+        <li><strong>Gym Memberships:</strong> We offer flexible membership plans to accommodate your lifestyle and
+          fitness goals. Our membership options include:</li>
+        <ul>
+          <li><strong>Platinum Membership:</strong> Enjoy unlimited access to all our branches, priority booking for
+            classes, personalized training programs, and exclusive member benefits.</li>
+          <li><strong>Standard Membership:</strong> Access to our branches with standard class bookings and a range of
+            general fitness amenities.</li>
+        </ul>
+      </ul>
+    </div>
+    <!-- <a href="membership.html">
+      <button class="explore_plans">
+        explore our memberships
+      </button></a> -->
+
+      <div class="explore_plans">
+        <button>explore our memberships</button>
+
+      </div>
+      <div class="go_down">
+    <h2>Our Locations</h2>
+    <p>With branches spread across Nigeria, Revive Fitness is committed to making high-quality fitness solutions
+      accessible to everyone. Our state-of-the-art facilities are equipped with the latest fitness technology and
+      staffed by professional trainers who are dedicated to helping you succeed.</p>
+    </div>
+    <h2>Join Us Today!</h2>
+    <p>Whether you're looking to start a new fitness journey or enhance your existing routine, Revive Fitness is here to
+      support you every step of the way. Visit us at one of our branches or contact us to learn more about our
+      memberships and classes. We look forward to helping you achieve your fitness goals!</p>
+
+    <div class="highlight">
+      <p><strong>Contact Us:</strong> For more information, please reach out to us at <a
+          href="mailto:contact@revivefitness.ng">contact@revivefitness.ng</a> or call us at [Your Contact Number].</p>
+    </div>
+  </main>
+
+  {% endblock %}
