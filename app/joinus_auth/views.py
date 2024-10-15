@@ -5,3 +5,5 @@ def p_details(request):
      return render(request,'joinus_personaldetails.html')
 def joinus_plan(request):
      return render(request,'joinus_plan.html')
+def setpassword(request):
+     return render(request,'setpassword.html')
