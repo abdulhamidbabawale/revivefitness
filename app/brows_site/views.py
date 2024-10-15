@@ -8,3 +8,9 @@ def home(request):
 
 def classes(request):
      return render(request,'classes.html',{'active_page':'classes'})
+
+def aboutus(request):
+     return render(request,'aboutus.html',{'active_page':'aboutus'})
+
+def membership(request):
+     return render(request,'membership.html',{'active_page':'membership'})
