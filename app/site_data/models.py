@@ -42,8 +42,12 @@ class User(AbstractBaseUser,PermissionsMixin):
 
     # STATUS = Choices('draft', 'published')
 class Plans(models.Model):
-    plan_name=models.CharField(max_length=25, unique=True,blank=False)
+    plan_name=Choices('Standard', 'Platinum')
     plan_price=models.IntegerField(blank=False)
+
+class Plan_Duration(models.Model):
+    planid=models.ForeignKey(Plans, on_delete=models.CASCADE ,related_name='plans_benefit')
+    plan_duration=Choices('monthly', 'quaterly', 'yearly')
 
 class Benefits(models.Model):
     planid=models.ForeignKey(Plans, on_delete=models.CASCADE ,related_name='plans_benefit')
