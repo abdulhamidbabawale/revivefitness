@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "app.joinus_auth",
 
 ]
+AUTH_USER_MODEL="site_data.User"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
