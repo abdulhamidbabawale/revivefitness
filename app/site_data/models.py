@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import UserManager,AbstractBaseUser,PermissionsMixin
 from model_utils import Choices
+from cloudinary.models import CloudinaryField
 # Create your models here.
 
 class CustomUserManagement(UserManager):
@@ -30,7 +31,6 @@ class User(AbstractBaseUser,PermissionsMixin):
     fname = models.CharField(max_length=255, blank=True)
     lname = models.CharField(max_length=255, blank=True)
     phone_number = models.CharField(max_length=20, blank=True, null=True, unique=True)
-    profile_picture = models.ImageField(upload_to='user_avatars/', blank=True, null=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
@@ -40,14 +40,50 @@ class User(AbstractBaseUser,PermissionsMixin):
     email_verification_code= models.CharField(max_length=5, blank=True, null=True)
     email_verification_expiry = models.DateTimeField(blank=True, null=True)
 
+    objects = CustomUserManagement()
+    USERNAME_FIELD = 'email'
+    EMAIL_FIELD='email'
+    REQUIRED_FIELDS = []
+    class Meta:
+        verbose_name = 'User'
+        verbose_name_plural = 'Users'
+
     # STATUS = Choices('draft', 'published')
 class Plans(models.Model):
-    plan_name=Choices('Standard', 'Platinum')
+    STANDARD ='standard'
+    PLATINUM='platinum'
+    PLAN_CHOICES=[
+     ( STANDARD ,'Standard'),
+     ( PLATINUM,'Platinum')
+    ]
+    plan_name=models.CharField(max_length=15,choices=PLAN_CHOICES)
     plan_price=models.IntegerField(blank=False)
 
-class Plan_Duration(models.Model):
-    planid=models.ForeignKey(Plans, on_delete=models.CASCADE ,related_name='plans_benefit')
-    plan_duration=Choices('monthly', 'quaterly', 'yearly')
+class Classes(models.Model):
+    # classs_img = models.ImageField(upload_to='images/')
+    classs_img = CloudinaryField('image',folder='revive fitness/classes')
+    class_name = models.CharField(max_length=100,unique=True)
+    decription=models.TextField(null=False,blank=False)
+
+class PlanDuration(models.Model):
+    MONTHLY = 'monthly'
+    QUARTERLY = 'quarterly'
+    YEARLY = 'yearly'
+    DURATION_CHOICES = [
+        (MONTHLY, 'Monthly'),
+        (QUARTERLY, 'Quarterly'),
+        (YEARLY, 'Yearly')
+    ]
+    userid=models.ForeignKey(User,on_delete=models.CASCADE ,related_name='plans_duration_userid')
+    planid=models.ForeignKey(Plans, on_delete=models.CASCADE ,related_name='plans_duration_planid')
+    plan_duration = models.CharField(max_length=10, choices=DURATION_CHOICES)
+    # classes = models.OneToOneField(Classes,on_delete=models.CASCADE, related_name='classes_duration')
+    # plan_duration=Choices('monthly', 'quaterly', 'yearly')
+    # total_price=models.DecimalField(null=True,blank=True)
+    is_active_plan=models.BooleanField(default=True)
+    is_expired=models.BooleanField(default=False)
+    date_regitered=models.DateTimeField(auto_now_add=True)
+    expiry_date=models.DateTimeField(auto_now=True)
 
 class Benefits(models.Model):
     planid=models.ForeignKey(Plans, on_delete=models.CASCADE ,related_name='plans_benefit')
@@ -55,9 +91,16 @@ class Benefits(models.Model):
     is_instandard=models.BooleanField(default=False)
     is_inplatinum=models.BooleanField(default=False)
 
-class Classes(models.Model):
-    classs_img = models.ImageField(upload_to='images/')
-    class_name = models.CharField(max_length=100,unique=True)
-    decription=models.TextField(null=False,blank=False)
 
+
+class UserProfile(models.Model):
+    userid=models.OneToOneField(User,on_delete=models.CASCADE ,related_name='profile_userid')
+    profile_picture = CloudinaryField('image',folder='revive fitness/profile_pic')
+    gender=models.CharField(max_length=25,null=True, blank=True)
+    address = models.CharField(max_length=255, blank=True, null=True)
+    city = models.CharField(max_length=100, blank=True, null=True)
+    state = models.CharField(max_length=100, blank=True, null=True)
+    zip_code = models.CharField(max_length=20, blank=True, null=True)
+    country = models.CharField(max_length=100, blank=True, null=True)
+    plan_duration=models.ManyToManyField(PlanDuration , related_name='profiles' )
 
