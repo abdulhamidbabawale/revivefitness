@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
 }
-body{
-background-color: rgb(175, 221, 229,0.5);
-font-family: Arial, sans-serif;
-}
 main{
   margin-top: 90px;
+}
+.all_info{
+  width: 700px;
+  margin: auto;
 }
 h4{
   color: #0FA4AF;
@@ -28,7 +28,6 @@ h4{
   width: 100px;
   height: 100px;
   border-radius: 100%;
-  /* margin-left:20px; */
   position:relative;
 
 }
@@ -36,7 +35,6 @@ h4{
   width: 100px;
   height: 100px;
   border-radius: 100%;
-  /* margin-left:20px; */
   padding-top: 5px;
   padding-bottom: 5px;
   object-fit: cover;
@@ -45,8 +43,6 @@ h4{
 .basic_info_text{
   margin-left: 10px;
   margin-top: 15px;
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
 }
 .basic_info_text p{
   padding: 0;
@@ -60,17 +56,11 @@ h4{
   border:solid 1.4px #0FA4AF;
   border-radius: 10px;
   margin-bottom: 50px;
-  /* display: flex;
-  flex-direction: row; */
-  /* justify-content: baseline; */
   padding: 10px;
 }
 .perosnal_info h5{
  margin-bottom: 15px;
 }
-/* .perosnal_info_row_2{
-position: relative;
-} */
 #edit_info{
   border: #0FA4AF 1px solid;
   border-radius: 5px;
@@ -100,9 +90,6 @@ position: relative;
   border:solid 1.4px #0FA4AF;
   border-radius: 10px;
   margin-bottom: 50px;
-  /* display: flex;
-  flex-direction: row; */
-  /* justify-content: baseline; */
   padding: 10px;
 }
 
@@ -112,9 +99,6 @@ position: relative;
   border:solid 1.4px #0FA4AF;
   border-radius: 10px;
   margin-bottom: 50px;
-  /* display: flex;
-  flex-direction: row; */
-  /* justify-content: baseline; */
   padding: 10px;
 }
 .plan_info p{
@@ -160,7 +144,6 @@ position: relative;
   mask-size: 100% 100%;
 }
 #iconify{
-  /* margin-bottom: -10px; */
   font-size: 23px;
   margin-left: 5px;
 }
@@ -180,39 +163,42 @@ position: relative;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 90px;
-  padding: 34px;
-  padding-top: 0;
+  padding: 20px;
 }
 .account_history table {
   width: 100%;
-  text-align: center;
   border-collapse: collapse
 }
 
 .account_history tr{
-  /* border-bottom: #0FA4AF 1.4px solid; */
   position: relative;
+  padding-top: 7px;
+padding-bottom: 7px;
 }
-.account_history tr::after {
-  content: "";
-  display: block;
-  width: 80%;
-  height: 1px;
-  background-color: #0FA4AF;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
+
+
+ dd{
+  font-size: 15px;
+  font-weight: 100;
+ }
+ td{
+  font-size: 14px;
+  font-weight: 100;
+ }
+ .acc_table tr:nth-child(even) {
+  background-color: rgb(175, 221, 229,0.7); /* Light grey */
 }
-td ,th{
-text-align: center;
-padding-top: 5px;
-padding-bottom: 5px;
-/* padding: 0;
-margin: 0; */
+
+/* Odd rows */
+.acc_table tr:nth-child(odd) {
+  background-color: rgb(175, 221, 229,0.1); /* White */
 }
 
 @media only screen and (max-width: 768px){
+  .all_info{
+    width:fit-content;
+    margin: auto;
+  }
   main p{
     font-size: 15px;
     margin: 0;
@@ -222,16 +208,13 @@ margin: 0; */
     display: flex;
     margin: 0;
     margin-left: 10px;
-    /* margin-top: -10px; */
   }
   .upgrade_membership p{
     margin: 0;
     display: flex;
     margin-left: 10px;
-    /* margin-top: -10px; */
   }
   #iconify{
-    /* margin-bottom: -10px; */
     font-size: 33px;
     margin-top: 10px;
     margin-right: 10px;
@@ -239,26 +222,66 @@ margin: 0; */
 }
 
 @media only screen and (max-width: 380px){
+  #edit_info{
+    border: #0FA4AF 1px solid;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14px;
+  }
+  .terminate_membership {
+    border-radius: 5px;
+    height: 30px;
+    margin-top: 4px;
+  }
+  .upgrade_membership {
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 4px;
+
+  }
   .terminate_membership p{
     display: flex;
     margin: 0;
     margin-left: 10px;
-    margin-top: 10px;
-    /* margin-top: -10px; */
+    margin-top: 2px;
+    font-size: 16px;
   }
   .upgrade_membership p{
     margin: 0;
     display: flex;
     margin-left: 10px;
-    margin-top: 10px;
-    /* margin-top: -10px; */
+    margin-top: 2px;
+    font-size: 16px;
   }
+
   #iconify{
-    /* margin-bottom: -10px; */
-    font-size: 33px;
-    margin-top: -5px;
+    font-size: 27px;
+    margin-top: -2px;
     margin-right: 10px;
   }
+  h4{
+    font-size: 16px;
+  }
+  h5{
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  dt{
+font-size: 14px;
+white-space: nowrap;
+  }
+  th{
+    font-size: 14px;
+  }
+  dd{
+    font-size: 12px;
+    font-weight: 100;
+   }
+   td{
+    font-size: 12px;
+    font-weight: 100;
+   }
   .mem .go{
   display: none;
 }
