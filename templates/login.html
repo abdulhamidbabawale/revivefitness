@@ -6,6 +6,8 @@
 {% block nav %}
 {% endblock %}
 <main>
+
+
   <div class="container">
     <div class="row">
       <div class="login_box">
@@ -16,12 +18,13 @@
             alt="">
         </div>
         <h5>Signin to your account</h5>
-        <form action="">
-          <input type="email" placeholder="Email">
+        <form action="{% url 'login_view' %}" method="POST">
+          {% csrf_token %}
+          <input type="email" placeholder="Email" name="email" >
           <!-- <br> -->
           <a id="no_pass" href="">Forgot password?</a>
           <!-- <br> -->
-          <input type="password" name="" id="" placeholder="Password">
+          <input type="password" id="" placeholder="Password" name="password">
           <br>
           <button type="submit" class=" " id="signin_button">Signin</button>
         </form>
