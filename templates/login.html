@@ -6,7 +6,18 @@
 {% block nav %}
 {% endblock %}
 <main>
-
+  {% if messages %}
+  {% for message in messages %}
+  <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        {{message}}
+      </div>
+      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  {% endfor %}
+  {% endif %}
 
   <div class="container">
     <div class="row">
@@ -20,11 +31,11 @@
         <h5>Signin to your account</h5>
         <form action="{% url 'login_view' %}" method="POST">
           {% csrf_token %}
-          <input type="email" placeholder="Email" name="email" >
+          <input type="email" placeholder="Email" name="email" required>
           <!-- <br> -->
           <a id="no_pass" href="">Forgot password?</a>
           <!-- <br> -->
-          <input type="password" id="" placeholder="Password" name="password">
+          <input type="password" id="" placeholder="Password" name="password" required>
           <br>
           <button type="submit" class=" " id="signin_button">Signin</button>
         </form>
