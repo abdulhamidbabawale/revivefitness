@@ -7,6 +7,19 @@
 
 
 <main >
+  <!-- {% if messages %}
+  {% for message in messages %}
+  <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        {{message}}
+      </div>
+      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  {% endfor %}
+  {% endif %} -->
+
   <!--carousel-->
   <div class="container">
     <div class="swiper">
@@ -49,7 +62,7 @@
     <h1>MEMBERSHIPS</h1>
     <div class="row plans">
       <div class="col">
-        <div class="platinium">
+        <div class="platinium enlarge_on_hover">
           <h6>Platinium</h6>
           <p>Starting at</p>
           <span class="price">
@@ -67,7 +80,7 @@
       </div>
       <div class="col go_on_mobile"></div>
       <div class="col">
-        <div class="standard">
+        <div class="standard enlarge_on_hover">
           <h6>Standard</h6>
           <p>Starting at</p>
           <span class="price2">
