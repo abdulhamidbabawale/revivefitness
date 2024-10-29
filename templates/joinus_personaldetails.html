@@ -54,6 +54,11 @@
         <div class="details">
           <p>Personal Details</p>
 
+
+          <input id="planDurationInput" class="form-control invisible-input" type="text" placeholder="" required>
+          <input id="selectedClassInput" class="form-control invisible-input" type="text" placeholder="" required>
+
+
           <fieldset>
             <input class="form-control " type="text" placeholder="First name" required>
             <div class="invalid-feedback">
@@ -178,5 +183,14 @@
       })
     })()
   </script>
+
+<script>
+  // Retrieve the saved data
+  const planDuration = localStorage.getItem('planDuration');
+  const selectedClass = localStorage.getItem('selectedClass');
+
+  document.getElementById('planDurationInput').value = planDuration ? planDuration : 'Not selected';
+  document.getElementById('selectedClassInput').value = selectedClass ? selectedClass : 'Not selected';
+</script>
 {% endblock %}
 
