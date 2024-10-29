@@ -53,7 +53,19 @@
 
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
+          {% for data in all_class %}
           <div class="swiper-slide">
+            <div class="specific_class">
+              <div class="class_img">
+                <img src="{{ data.classs_img.url }}" alt="">
+              </div>
+              <p>{{ data.class_name }}</p>
+              <p>{{data.decription}}</p>
+            </div>
+
+          </div>
+          {% endfor %}
+          <!-- <div class="swiper-slide">
             <div class="specific_class">
               <div class="class_img">
                 <img src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727024262/revive%20fitness/rvygrn2pi1x7ag79g6sg.jpg" alt="">
@@ -63,89 +75,13 @@
                 coordination, all while offering a fun and empowering experience.</p>
             </div>
 
-          </div>
-          <div class="swiper-slide">
-            <div class="specific_class">
-              <div class="class_img">
-                <img src="/mystaticfiles/pexels-cottonbro-4761594.jpg" alt="">
-              </div>
-              <p>Boxing</p>
-              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
-                coordination, all while offering a fun and empowering experience.</p>
-            </div>
-
-          </div>
-          <div class="swiper-slide">
-            <div class="specific_class">
-              <div class="class_img">
-                <img src="/mystaticfiles/pexels-cottonbro-4761594.jpg" alt="">
-              </div>
-              <p>Boxing</p>
-              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
-                coordination, all while offering a fun and empowering experience.</p>
-            </div>
-
-          </div>
-          <div class="swiper-slide">
-            <div class="specific_class">
-              <div class="class_img">
-                <img src="/mystaticfiles/pexels-cottonbro-4761594.jpg" alt="">
-              </div>
-              <p>Boxing</p>
-              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
-                coordination, all while offering a fun and empowering experience.</p>
-            </div>
-
-          </div>
-          <div class="swiper-slide">
-            <div class="specific_class">
-              <div class="class_img">
-                <img src="/mystaticfiles/pexels-cottonbro-4761594.jpg" alt="">
-              </div>
-              <p>Boxing</p>
-              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
-                coordination, all while offering a fun and empowering experience.</p>
-            </div>
-
-          </div>
-          <div class="swiper-slide">
-            <div class="specific_class">
-              <div class="class_img">
-                <img src="/mystaticfiles/pexels-cottonbro-4761594.jpg" alt="">
-              </div>
-              <p>Boxing</p>
-              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
-                coordination, all while offering a fun and empowering experience.</p>
-            </div>
-
-          </div>
-          <div class="swiper-slide">
-            <div class="specific_class">
-              <div class="class_img">
-                <img src="/mystaticfiles/pexels-cottonbro-4761594.jpg" alt="">
-              </div>
-              <p>Boxing</p>
-              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
-                coordination, all while offering a fun and empowering experience.</p>
-            </div>
-
-          </div>
-          <div class="swiper-slide">
-            <div class="specific_class">
-              <div class="class_img">
-                <img src="/mystaticfiles/pexels-cottonbro-4761594.jpg" alt="">
-              </div>
-              <p>Boxing</p>
-              <p>Our boxing classes provide an intense workout that boosts fitness, builds strength, and enhances
-                coordination, all while offering a fun and empowering experience.</p>
-            </div>
-
-          </div>
+          </div> -->
         </div>
         <div class="pagination_style">
         <div class="swiper-pagination "></div>
       </div>
       </div>
+
       <hr>
       <div class="we_offer">
         <div class="we_offer_card">
