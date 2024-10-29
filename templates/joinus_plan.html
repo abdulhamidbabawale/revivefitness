@@ -9,12 +9,6 @@
 
   {% endblock %}
   <main class="container">
-    <!-- <ul>
-      <div class="num"><p>1</p></div><li>plan duration</li>
-     <div class="num"><p>2</p> </div><li>personal details</li>
-     <div class="num"><p>3</p></div><li>payment</li>
-     <div class="num"><p>4</p></div><li>checkout</li>
-    </ul> -->
     <div class=" mm">
       <div class="row top">
         <div class="col oo">
@@ -102,11 +96,12 @@
   <p >Select classes</p>
   <p>*You can only select 1 class</p>
   <div class="kkk">
+    {% for name in classes %}
   <label>
-    <input id="class1" type="radio" name="clas">
-    <div  id="class_but">Boxing</div>
+    <input id="class1" type="radio" name="clas" value="{{name.id}}">
+    <div  id="class_but">{{name.class_name}}</div>
    </label>
-
+{% endfor %}
    <label >
     <input id="class1" type="radio" name="clas">
     <div  id="class_but">Mixed Martial Arts (MMA)</div>
@@ -168,7 +163,7 @@
    </div> -->
 
 
-
+<script src="{ static 'temporary_storage.js' }"></script>
 
 
 
