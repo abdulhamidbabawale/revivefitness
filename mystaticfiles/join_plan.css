@@ -19,7 +19,12 @@ background-color: rgb(175, 221, 229,0.5);
 }
 
 .select_plan{
-  display: none;
+  transition: transform 0.3s ease;
+}
+.select_plan label{
+  display: flex;
+  justify-content: center;
+
 }
 .select_plan p:hover{
   color: #0FA4AF;
@@ -29,6 +34,32 @@ background-color: rgb(175, 221, 229,0.5);
   transition: transform 0.3s ease;
 }
 
+
+.plan_drop_down{
+  width: 80px;
+  height: 30px;
+  border-radius: 9px;
+  margin-bottom: 10px;
+  background-color: #077077;
+}
+.select_plan label:nth-child(2) .plan_drop_down {
+  background-color: #0FA4AF;
+}
+label input[type="radio"]{
+  display: none;
+  }
+
+ label input[type="radio"]:checked ~ .plan_drop_down{
+  background-color: #0FA4AF;
+  background: #AFDDE5;
+  /* color: #0FA4AF;; */
+ }
+ .enlarge_on_hover{
+  transition: transform 0.3s ease;
+}
+.enlarge_on_hover:hover{
+  transform: scale(1.07);
+}
 h3{
   text-align: center;
 }
@@ -60,11 +91,6 @@ h3{
   color: #0FA4AF;
 }
 
-.duration{
-  width: 200px;
-  /* height: 300px; */
-}
-
 .duration span{
   width: 120px;
   height: 40px;
@@ -77,6 +103,22 @@ font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ox
 cursor: pointer;
 transition: 0.5s;
 user-select: none;
+}
+.duration{
+  width: 200px;
+  flex: 1;
+  cursor: pointer;
+  transition: flex 0.6s ease;
+}
+.duration:hover{
+  flex: 1.5;
+}
+#all_perks {
+  transition: transform 0.5s ease; /* Quick transition for the text */
+}
+
+.duration:hover #all_perks {
+  transition: flex 0.5s ease;
 }
 .duration span p{
   margin-top: -13px;
@@ -94,6 +136,12 @@ display: none;
     background: #AFDDE5;
     color: #024950;
     }
+    .yearly label input[type="radio"]:checked ~ span{
+      background: #AFDDE5;
+      color: #024950;
+      border: solid 2px #024950;
+      }
+
 
 #all_perks{
   margin-top: 20px;

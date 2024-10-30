@@ -51,8 +51,14 @@
 
   <a id="change_plan" href="#">change plan <i class="fa-solid fa-chevron-down" id="arrowIcon"></i></a>
   <div class="select_plan">
-    <p>platinium</p>
-    <p>standard</p>
+    <label for="platinum_plan">
+      <input id="platinum_plan" type="radio" name="plan">
+      <div class="plan_drop_down enlarge_on_hover">platinum</div>
+    </label>
+    <label for="standard_plan">
+      <input id="standard_plan" type="radio" name="plan">
+      <div class="plan_drop_down enlarge_on_hover">standard</div>
+    </label>
   </div>
 </div>
 
@@ -65,7 +71,7 @@
      <p>N24,890</p>
      <label for="monthly_plan">
        <input id="monthly_plan" type="radio" name="duration" value="monthly">
-       <span type="button" id="select_but">select</span>
+       <span type="button" id="select_but" class="enlarge_on_hover">select</span>
       </label>
      <p id="all_perks">Conatains all <a href="">perks</a> of {premium} membership</p>
     </div>
@@ -75,7 +81,7 @@
      <p>N24,890</p>
      <label for="quaterly_plan">
        <input id="quaterly_plan" type="radio" name="duration" value="quarterly">
-       <span type="button" id="select_but">select</span>
+       <span type="button" id="select_but" class="enlarge_on_hover">select</span>
       </label>
      <p id="all_perks">Conatains all <a href="">perks</a> of {premium} membership</p>
     </div>
@@ -87,7 +93,7 @@
      <!-- <button onclick="changecolor(this)" type="button" id="select_but">select</button> -->
      <label for="yearly_plan">
        <input id="yearly_plan" type="radio" name="duration" value="yearly">
-       <span type="button" id="select_but">select</span>
+       <span type="button" id="select_but" class="enlarge_on_hover">select</span>
       </label>
      <!-- <button onclick="changecolor(this)" value="monthly" type="button" id="select_but">select</button> -->
      <p id="all_perks">Conatains all <a href="">perks</a> of {premium} membership</p>
@@ -103,7 +109,7 @@
     {% for name in classes %}
   <label>
     <input id="class1" type="radio" name="clas" value="{{name.id}}">
-    <div  id="class_but">{{name.class_name}}</div>
+    <div  id="class_but" class="enlarge_on_hover">{{name.class_name}}</div>
    </label>
 {% endfor %}
 
