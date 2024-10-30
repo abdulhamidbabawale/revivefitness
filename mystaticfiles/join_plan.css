@@ -7,22 +7,35 @@ background-color: rgb(175, 221, 229,0.5);
 }
 
 
+
 #change_plan{
   margin-top: 20px;
   margin-bottom: 10px;
   text-decoration: none;
   color: #0FA4AF;
   text-align: center;
- display: flex;
- justify-content: center;
+  display: inline-block;
+
 }
 
+.select_plan{
+  display: none;
+}
+.select_plan p:hover{
+  color: #0FA4AF;
+}
+.rotate-icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
 
 h3{
   text-align: center;
 }
 .top_header{
   margin-top: -70px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 .contents{
   margin: auto;

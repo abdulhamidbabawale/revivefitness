@@ -49,7 +49,11 @@
 <div class="top_header">
   <h3>Select  {premium} plan duration</h3>
 
-  <a id="change_plan" href="#">change plan</a>
+  <a id="change_plan" href="#">change plan <i class="fa-solid fa-chevron-down" id="arrowIcon"></i></a>
+  <div class="select_plan">
+    <p>platinium</p>
+    <p>standard</p>
+  </div>
 </div>
 
 
@@ -60,7 +64,7 @@
      <p>monthly <br> subscription</p>
      <p>N24,890</p>
      <label for="monthly_plan">
-       <input id="monthly_plan" type="radio" name="duration">
+       <input id="monthly_plan" type="radio" name="duration" value="monthly">
        <span type="button" id="select_but">select</span>
       </label>
      <p id="all_perks">Conatains all <a href="">perks</a> of {premium} membership</p>
@@ -70,7 +74,7 @@
      <p>monthly <br> subscription</p>
      <p>N24,890</p>
      <label for="quaterly_plan">
-       <input id="quaterly_plan" type="radio" name="duration">
+       <input id="quaterly_plan" type="radio" name="duration" value="quarterly">
        <span type="button" id="select_but">select</span>
       </label>
      <p id="all_perks">Conatains all <a href="">perks</a> of {premium} membership</p>
@@ -82,7 +86,7 @@
      <p>N24,890</p>
      <!-- <button onclick="changecolor(this)" type="button" id="select_but">select</button> -->
      <label for="yearly_plan">
-       <input id="yearly_plan" type="radio" name="duration">
+       <input id="yearly_plan" type="radio" name="duration" value="yearly">
        <span type="button" id="select_but">select</span>
       </label>
      <!-- <button onclick="changecolor(this)" value="monthly" type="button" id="select_but">select</button> -->
@@ -102,45 +106,7 @@
     <div  id="class_but">{{name.class_name}}</div>
    </label>
 {% endfor %}
-   <label >
-    <input id="class1" type="radio" name="clas">
-    <div  id="class_but">Mixed Martial Arts (MMA)</div>
-   </label>
 
-   <label >
-    <input id="class1" type="radio" name="clas">
-    <div  id="class_but">CrossFit</div>
-   </label>
-
-   <label>
-    <input id="class1" type="radio" name="clas">
-    <div  id="class_but">Muay Thai</div>
-   </label>
-
-   <label >
-    <input id="class1" type="radio" name="clas">
-    <div  id="class_but">Powerlifting</div>
-   </label>
-
-   <label >
-    <input id="class1" type="radio" name="clas">
-    <div  id="class_but">Self-Defense Training</div>
-   </label>
-
-   <label >
-    <input id="class1" type="radio" name="clas">
-    <div  id="class_but">Pilates</div>
-   </label>
-
-   <label >
-    <input id="class1" type="radio" name="clas">
-    <div  id="class_but">Judo</div>
-   </label>
-
-   <label >
-    <input id="class1" type="radio" name="clas">
-    <div  id="class_but">Yoga</div>
-   </label>
   </div>
 </div>
 
@@ -156,11 +122,6 @@
  </div>
  </div>
 
-
-   <!-- <div class="buttom_nav">
-    <a href=""><button id="exit">exit</button></a>
-    <a href="/templates/joinus_personaldetails.html"><button id="next">next</button></a>
-   </div> -->
 
 
 <script src="{ static 'temporary_storage.js' }"></script>
