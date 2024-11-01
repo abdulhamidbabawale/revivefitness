@@ -4,7 +4,10 @@
 
   <link rel="stylesheet" href="{% static 'join_plan.css'%}">
   <link rel="stylesheet" href="{% static 'joinus_nav.css'%}">
-
+  <script
+  src="https://code.jquery.com/jquery-3.7.0.js"
+  integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+  crossorigin="anonymous"></script>
   {% block nav %}
 
   {% endblock %}
@@ -46,29 +49,46 @@
         </div>
       </div>
     </div>
+
 <div class="top_header">
-  <h3>Select  {premium} plan duration</h3>
+  <h3>Select {{selected_plan}} plan duration</h3>
 
   <a id="change_plan" href="#">change plan <i class="fa-solid fa-chevron-down" id="arrowIcon"></i></a>
   <div class="select_plan">
     <label for="platinum_plan">
-      <input id="platinum_plan" type="radio" name="plan">
-      <div class="plan_drop_down enlarge_on_hover">platinum</div>
+      <input onclick="window.location.reload()" id="platinum_plan" type="radio" name="plan" value="{{platinum_plan.plan_name}}">
+      <div class="plan_drop_down enlarge_on_hover">{{platinum_plan.plan_name}}</div>
     </label>
     <label for="standard_plan">
-      <input id="standard_plan" type="radio" name="plan">
-      <div class="plan_drop_down enlarge_on_hover">standard</div>
+      <input onclick="window.location.reload()" id="standard_plan" type="radio" name="plan" value="{{standard_plan.plan_name}}">
+      <div class="plan_drop_down enlarge_on_hover">{{standard_plan.plan_name}}</div>
     </label>
   </div>
 </div>
+<div class="contents">
+  <!-- <script>
+$(document).ready(function(){
+  setInterval(function(){
+    $("#mk").load(window.location.href + "#mk");
+  },3000);
+})
+  </script> -->
 
 
- <div class="contents">
+  <!-- <p id="selectedplanDisplay">Not selected</p> -->
+<p id="mk"> {{selected_plan}} </p>
+<p> {{duration_cost.platinum_quterly}} </p>
+<p> {{duration_cost.platinum_yearly}} </p>
+
+
+
+
   <div class="plans_duration">
+    {% if selected_plan == 'platinum' %}
     <div class="duration monthly">
      <h4>Monthly <br>plan</h4>
      <p>monthly <br> subscription</p>
-     <p>N24,890</p>
+     <p>₦{{duration_cost.platinum_monthly}}</p>
      <label for="monthly_plan">
        <input id="monthly_plan" type="radio" name="duration" value="monthly">
        <span type="button" id="select_but" class="enlarge_on_hover">select</span>
@@ -78,7 +98,7 @@
     <div class="duration quaterly">
      <h4>Monthly <br>plan</h4>
      <p>monthly <br> subscription</p>
-     <p>N24,890</p>
+     <p>₦{{duration_cost.platinum_quterly}}</p>
      <label for="quaterly_plan">
        <input id="quaterly_plan" type="radio" name="duration" value="quarterly">
        <span type="button" id="select_but" class="enlarge_on_hover">select</span>
@@ -89,16 +109,46 @@
     <div class="duration yearly">
      <h4>Monthly <br>plan</h4>
      <p>monthly <br> subscription</p>
-     <p>N24,890</p>
-     <!-- <button onclick="changecolor(this)" type="button" id="select_but">select</button> -->
+     <p>₦{{duration_cost.platinum_yearly}}</p>
      <label for="yearly_plan">
        <input id="yearly_plan" type="radio" name="duration" value="yearly">
        <span type="button" id="select_but" class="enlarge_on_hover">select</span>
       </label>
-     <!-- <button onclick="changecolor(this)" value="monthly" type="button" id="select_but">select</button> -->
      <p id="all_perks">Conatains all <a href="">perks</a> of {premium} membership</p>
     </div>
+    {% else %}
+    <div class="duration monthly">
+      <h4>Monthly <br>plan</h4>
+      <p>monthly <br> subscription</p>
+      <p>₦24,890</p>
+      <label for="monthly_plan">
+        <input id="monthly_plan" type="radio" name="duration" value="monthly">
+        <span type="button" id="select_but" class="enlarge_on_hover">select</span>
+       </label>
+      <p id="all_perks">Conatains all <a href="">perks</a> of {premium} membership</p>
+     </div>
+     <div class="duration quaterly">
+      <h4>Monthly <br>plan</h4>
+      <p>monthly <br> subscription</p>
+      <p>₦24,890</p>
+      <label for="quaterly_plan">
+        <input id="quaterly_plan" type="radio" name="duration" value="quarterly">
+        <span type="button" id="select_but" class="enlarge_on_hover">select</span>
+       </label>
+      <p id="all_perks">Conatains all <a href="">perks</a> of {premium} membership</p>
+     </div>
 
+     <div class="duration yearly">
+      <h4>Monthly <br>plan</h4>
+      <p>monthly <br> subscription</p>
+      <p>₦24,890</p>
+      <label for="yearly_plan">
+        <input id="yearly_plan" type="radio" name="duration" value="yearly">
+        <span type="button" id="select_but" class="enlarge_on_hover">select</span>
+       </label>
+      <p id="all_perks">Conatains all <a href="">perks</a> of {premium} membership</p>
+     </div>
+    {% endif %}
     </div>
 
 
@@ -130,8 +180,81 @@
 
 
 
-<script src="{ static 'temporary_storage.js' }"></script>
 
+ <!-- <script>
+  // Function to load content of #mk without reloading the page
+  function refreshContent() {
+    $("#mk").load(location.href + " #mk > *"); // Load only the content inside #mk
+  }
+
+  // Refresh content every 500 milliseconds
+  setInterval(refreshContent, 500);
+
+  // Ensure that the content is initially loaded when the document is ready
+  $(document).ready(function() {
+    // Initial load
+    refreshContent();
+  });
+</script> -->
+
+
+
+
+<script>
+document.querySelectorAll('input[name="duration"]').forEach(input => {
+  input.addEventListener('change', function () {
+    if (this.checked) { // Ensure this input is the one selected
+      localStorage.setItem('planDuration1', this.value); // Save to localStorage
+      console.log("Saved plan duration:", this.value); // Debugging message
+    }
+  });
+});
+
+// Store the selected class and its value
+document.querySelectorAll('input[name="clas"]').forEach(input => {
+    input.addEventListener('change', function () {
+        localStorage.setItem('selectedClass', this.value);  // Save selected class to local storage
+    });
+});
+
+
+
+  // Retrieve the saved selection on page load and set the radio as checked
+  document.addEventListener("DOMContentLoaded", function () {
+    const savedDuration = localStorage.getItem('planDuration1');
+    if (savedDuration) {
+      const savedInput = document.querySelector(`input[name="duration"][value="${savedDuration}"]`);
+      if (savedInput) {
+        savedInput.checked = true;
+      }
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const savedClass = localStorage.getItem('selectedClass');
+    if (savedClass) {
+      const savedInput = document.querySelector(`input[name="clas"][value="${savedClass}"]`);
+      if (savedInput) {
+        savedInput.checked = true;
+      }
+    }
+  });
+</script>
+
+ <script>
+  function getCookie(name) {
+    const value = "; " + document.cookie;
+    const parts = value.split("; " + name + "=");
+    if (parts.length === 2) return parts.pop().split(";").shift();
+    return null;
+}
+  // Retrieve the saved data
+  const selectedplan = getCookie('selectedplan');
+
+  document.getElementById('selectedplanDisplay').innerHTML = selectedplan ? selectedplan : 'Not selected';
+</script>
+
+<script src="{% static 'temporary_storage.js' %}"></script>
 
 
 
