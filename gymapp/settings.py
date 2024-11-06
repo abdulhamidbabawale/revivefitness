@@ -132,9 +132,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILES_DIRS=[
+# STATICFILES_DIRS=[
+#     BASE_DIR / "mystaticfiles"
+# ]
+STATIC_ROOT = BASE_DIR / "mystaticfiles"
+
+# Ensure STATICFILES_DIRS is only for development and not used in production
+STATICFILES_DIRS = [
     BASE_DIR / "mystaticfiles"
-]
+] if DEBUG else []
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
