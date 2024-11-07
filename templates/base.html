@@ -13,9 +13,15 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="{% static 'fontawesome-free-6.6.0-web/css/all.css' %}">
+  <script src="https://kit.fontawesome.com/0566afcd79.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="{% static 'footer.css' %}">
   <link rel="stylesheet" href="{% static 'nav.css'%}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="{% static 'nav.js'%}"></script>
+  <!-- <link rel="icon" type="image/x-icon"  href="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727025804/revive%20fitness/sfl5noczhq1zeqlibs9g.png"> -->
+  <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727024118/revive%20fitness/hlig0vskgs2qkdt6tiup.png">
+
 </head>
 
 <body style=" background-color: rgba(175, 221, 229,0.7) ; font-family: Arial, sans-serif;">
@@ -68,31 +74,44 @@
         <!-- <div class="login_join">
 
     </div> -->
-        <span class="login_join">
-          <span class="login_style">
-            <a href="{% url 'login_view' %}">
-              <p>Login</p>
-            </a>
-          </span>
-          <span class="join_style">
-            <a class="join" href="{% url 'joinus_plan_view' %}">
-              <p>Join us</p>
-            </a>
-          </span>
-        </span>
+    <span class="login_join">
+    {% if user is authenticated %}
 
+      <span class="login_style">
+        <a href="{% url 'login_view' %}">
+          <p>Login</p>
+        </a>
+      </span>
+      <span class="join_style">
+        <a class="join" href="{% url 'joinus_plan_view' %}">
+          <p>Join us</p>
+        </a>
+      </span>
+
+    {% else %}
+<p style="color: aliceblue;">logged {{user.email}}</p>
+
+{% endif %}
+</span>
       </div>
 
     </div>
 
   </nav>
+
   {% endblock %}
   {% block content %}
   {% endblock %}
 
 
-
-
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+    var toastList = toastElList.map(function (toastEl) {
+      return new bootstrap.Toast(toastEl, { autohide: true, delay: 5000 })  // Customize delay as needed
+    })
+    toastList.forEach(toast => toast.show())  // Show all toasts automatically
+  });</script>
   {% block footer %}
   <footer class="footer">
     <div class="container-fluid">
@@ -148,9 +167,7 @@
   </footer>
   {% endblock %}
 
-  <script src="{% static 'nav.js'%}"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://kit.fontawesome.com/0566afcd79.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
