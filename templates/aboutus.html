@@ -3,9 +3,11 @@
 {% load static %}
 
   <link rel="stylesheet" href="{% static 'aboutus.css'%}">
+  {% block join_nav %}
+  {% endblock %}
 
 
-  <main class="container">
+
     <div class="about_img">
       <img src="https://res.cloudinary.com/dtqdaogbn/image/upload/v1727023954/revive%20fitness/scv6nzojduu8d6om6iqp.jpg" alt="">
     </div>
@@ -64,6 +66,6 @@
       <p><strong>Contact Us:</strong> For more information, please reach out to us at <a
           href="mailto:contact@revivefitness.ng">contact@revivefitness.ng</a> or call us at [Your Contact Number].</p>
     </div>
-  </main>
+
 
   {% endblock %}
