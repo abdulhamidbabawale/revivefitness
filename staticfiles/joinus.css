@@ -1,0 +1,69 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+background-color: rgb(175, 221, 229,0.5);
+}
+
+iframe{
+  width: 100%;
+}
+
+
+
+.location{
+  padding-top: 60px;
+  width: fit-content;
+  margin: auto;
+}
+.states{
+  box-shadow: 10px 10px 17px -12px  black;
+  height: 200px;
+  width: 400px;
+  background-color: #0FA4AF;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 15px;
+}
+.dropdown_branches{
+  width: 200px;
+  height: 40px;
+  margin: auto;
+  background-color: #AFDDE5;
+  border-radius: 10px;
+}
+#non{
+  display: none;
+
+}
+
+
+
+input[type="text"], select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+input[type="text"]:focus, select:focus {
+  border-color: #007bff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
