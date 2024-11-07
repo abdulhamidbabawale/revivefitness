@@ -3,9 +3,11 @@
 {% load static %}
 
   <link rel="stylesheet" href="{% static 'membership.css' %}">
+  {% block join_nav %}
+  {% endblock %}
 
 
-  <main>
+
     <div class="container">
       <div class="top_text">
         <h1>MEMEBERSHIPS</h1>
@@ -103,7 +105,7 @@
       </table>
 
     </div>
-  </main>
+
 
 
   {% endblock %}
