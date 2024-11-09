@@ -77,12 +77,12 @@ class PlanDuration(models.Model):
     userid=models.ForeignKey(User,on_delete=models.CASCADE ,related_name='plans_duration_userid')
     planid=models.ForeignKey(Plans, on_delete=models.CASCADE ,related_name='plans_duration_planid')
     plan_duration = models.CharField(max_length=10, choices=DURATION_CHOICES)
-    # classes = models.OneToOneField(Classes,on_delete=models.CASCADE, related_name='classes_duration')
+    classes = models.ForeignKey(Classes,on_delete=models.CASCADE, related_name='classes_plan_duration')
     # plan_duration=Choices('monthly', 'quaterly', 'yearly')
-    # total_price=models.DecimalField(null=True,blank=True)
+    total_price=models.IntegerField(null=True,blank=True)
     is_active_plan=models.BooleanField(default=True)
     is_expired=models.BooleanField(default=False)
-    date_regitered=models.DateTimeField(auto_now_add=True)
+    date_registered=models.DateTimeField(auto_now_add=True)
     expiry_date=models.DateTimeField(auto_now=True)
 
 class Benefits(models.Model):
@@ -102,5 +102,5 @@ class UserProfile(models.Model):
     state = models.CharField(max_length=100, blank=True, null=True)
     zip_code = models.CharField(max_length=20, blank=True, null=True)
     country = models.CharField(max_length=100, blank=True, null=True)
-    plan_duration=models.ManyToManyField(PlanDuration , related_name='profiles' )
+    plan_data = models.ForeignKey(PlanDuration, on_delete=models.SET_NULL, null=True, blank=True, related_name='profiles_plan_data')
 
