@@ -18,8 +18,21 @@ background-color: rgb(175, 221, 229,0.5);
 
 }
 
-.select_plan{
+/* .select_plan{
   transition: transform 0.3s ease;
+} */
+.select_plan {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.2s ease, max-height 0.7s ease;
+  /* transition: max-height 0.4s ease, opacity 0.4s ease; */
+}
+
+/* Active popup container */
+.select_plan.visible {
+  opacity: 1;
+  max-height: 100px; /* Adjust as needed */
 }
 .select_plan label{
   display: flex;
@@ -41,6 +54,7 @@ background-color: rgb(175, 221, 229,0.5);
   border-radius: 9px;
   margin-bottom: 10px;
   background-color: #077077;
+  color: #AFDDE5;
 }
 .select_plan label:nth-child(2) .plan_drop_down {
   background-color: #0FA4AF;
@@ -50,9 +64,9 @@ label input[type="radio"]{
   }
 
  label input[type="radio"]:checked ~ .plan_drop_down{
-  background-color: #0FA4AF;
+  /* background-color: #0FA4AF; */
   background: #AFDDE5;
-  /* color: #0FA4AF;; */
+  color: #0FA4AF;;
  }
  .enlarge_on_hover{
   transition: transform 0.3s ease;
