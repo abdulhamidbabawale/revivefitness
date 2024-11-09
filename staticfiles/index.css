@@ -2,8 +2,10 @@
   margin: 0;
   padding: 0;
 }
-main{
+main {
   margin-top: 60px;
+  max-width: 100% !important;  /* Set full width */
+  padding: 0 !important;       /* Remove padding */
 }
 body{
   background-color: rgba(175, 221, 229,0.7) ;

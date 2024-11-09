@@ -1,12 +1,12 @@
 
-ul{
+.mm ul{
   padding-top: 50px;
   padding-bottom: 20px;
   list-style-type: none;
   margin: 0;
 }
 
-li{
+.mm li{
   list-style-type: none;
   color: #0FA4AF;
   margin-left: 29px;
@@ -16,12 +16,33 @@ li{
   color: #0FA4AF;
   font-size: 14px;
 }
+/* .num{
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  border: solid 2px #0FA4AF;
+  position: absolute;
+} */
 .num{
   width: 25px;
   height: 25px;
   border-radius: 100%;
   border: solid 2px #0FA4AF;
   position: absolute;
+  display: flex;
+  justify-content: center;
+}
+.num.active2{
+
+  display: flex;
+  justify-content: center;
+  background-color: #0FA4AF;
+}
+.num i{
+  /* color: #0FA4AF; */
+  color: #AFDDE5;
+  margin-top: 3px;
+
 }
 .top{
   padding-top: 40px;
@@ -37,7 +58,7 @@ li{
 .line{
   margin-top: -4px;
 }
-hr{
+.line hr{
  opacity: 1;
   width: 100%;
   border: 1.5px solid #0FA4AF ;
@@ -90,7 +111,7 @@ margin-bottom:50px ;
     margin-right: 3px;
     position: relative;
   }
-  li{
+  .mm li{
     position: relative;
     margin-left: -1px;
     font-size: 12px;
@@ -128,7 +149,7 @@ margin-bottom:50px ;
     margin-right: 3px;
     position: relative;
   }
-  li{
+  .mm li{
     position: relative;
     margin-left: -1px;
     font-size: 10px;
@@ -177,14 +198,14 @@ margin-bottom:50px ;
     margin-right: 3px;
     position: relative;
   }
-  li{
+  .mm li{
     font-size: 8.9px;
   }
   .line{
     width: 19px;
     margin-top: -10px;
   }
-  hr{
+ .mm  hr{
     margin-left: -9px;
     width: 19px;
     border: 1px solid #0FA4AF ;
