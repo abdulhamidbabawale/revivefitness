@@ -79,8 +79,8 @@
 
     </div> -->
         <span class="login_join">
-          {% if user is authenticated %}
-          <p style="color: aliceblue;">logged {{user.email}}</p>
+          {% if user.is_authenticated %}
+          <p style="color: aliceblue;">welcome {{user.email}}</p>
 
           {% else %}
           <span class="login_style">
