@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG','True')
+DEBUG = os.environ.get('DEBUG','True') == 'True'
 # DEBUG = True
 ALLOWED_HOSTS = ['revivefitness.onrender.com','127.0.0.1']
 
@@ -137,14 +137,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = "/static/"
-STATIC_ROOT = BASE_DIR / "staticfiles"
+if not DEBUG:
+   STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS=[
     BASE_DIR / "mystaticfiles"
 ]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'mystaticfiles')
 
 # STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+if not DEBUG:
+   STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 # Default primary key field type
