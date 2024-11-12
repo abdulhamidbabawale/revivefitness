@@ -1,7 +1,8 @@
 {
   "builds": [{
     "src": "gymapp/wsgi.py",
-    "use": "@vercel/python"
+    "use": "@vercel/python",
+    "config": { "maxLambdaSize": "15mb", "runtime": "python3.12.1" }
   }],
   "routes": [
     {
