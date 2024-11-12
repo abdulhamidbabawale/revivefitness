@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     "app.login_auth",
     "app.joinus_auth",
     "app.admin_side",
-    "cloudinary",
+
 
 ]
 AUTH_USER_MODEL="site_data.User"
