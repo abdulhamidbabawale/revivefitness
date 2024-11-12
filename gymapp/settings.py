@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG','True') == 'True'
 # DEBUG = True
-ALLOWED_HOSTS = ['revivefitness.onrender.com','127.0.0.1','.vercel.app']
+ALLOWED_HOSTS = ['revivefitness.onrender.com','127.0.0.1','revivefitness-gamma.vercel.app']
 
 
 # Application definition
