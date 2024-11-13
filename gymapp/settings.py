@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
 from pathlib import Path
-import cloudinary
+# import cloudinary
 from dotenv import load_dotenv
 load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -110,12 +110,12 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
-cloudinary.config(
-  cloud_name = os.environ.get('cloud_name'),
-  api_key = os.environ.get('api_key'),
-  api_secret = os.environ.get('api_secret'),
-  secure = True
-)
+# cloudinary.config(
+#   cloud_name = os.environ.get('cloud_name'),
+#   api_key = os.environ.get('api_key'),
+#   api_secret = os.environ.get('api_secret'),
+#   secure = True
+# )
 
 
 
