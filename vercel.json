@@ -17,7 +17,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "revivefitness/gymapp/wsgi.py" 
+      "dest": "revivefitness/gymapp/wsgi.py"
     }
   ]
 }
