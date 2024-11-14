@@ -10,14 +10,17 @@
     },
     {
       "src": "build_files.sh",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "/dist"
-      }
+      "use": "@vercel/static-build"
+
     }
   ],
 
   "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+
     {
       "src": "/(.*)",
       "dest": "gymapp/wsgi.py"
