@@ -12,7 +12,7 @@ Welcome to **Revive Fitness**, a web application designed to streamline gym regi
 
 ## **Tech Stack**
 
-- Backend: Django, Django REST Framework
+- Backend: Django
 - Frontend: Bootstrap, HTML, CSS
 - Database: PostgreSQL
 - Deployment: Render
@@ -23,4 +23,7 @@ Welcome to **Revive Fitness**, a web application designed to streamline gym regi
 Open your browser and navigate to [https://revivefitness.onrender.com](https://revivefitness.onrender.com.)
 Register as a new user and explore the available features.
 Admin users can log in to the admin dashboard to manage users and memberships.
+
+## **Design**
+[Fignma](https://www.figma.com/design/8xupgQs4iEpCdolQBwi5i8/gymproject?node-id=0-1&t=JV0kpP9tf0jKgxda-1)
 
