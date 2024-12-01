@@ -4,7 +4,7 @@ from django.http import JsonResponse
 import requests
 
 # Create your views here.
-  
+
 def p_details(request):
      context={
           'active_page':'p_details',
@@ -76,7 +76,8 @@ def reg(request):
 #           plan_duration
 #           total_price
 
-
+def success_page(request):
+     return render(request,'success.html')
 def registration_form(request):
      if request.method == 'POST':
           fname=request.POST.get('fname')

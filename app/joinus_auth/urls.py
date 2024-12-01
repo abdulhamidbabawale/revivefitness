@@ -6,4 +6,5 @@ urlpatterns =[
     path("plan/",views.joinus_plan,name='joinus_plan_view'),
     path("setpassword/",views.setpassword,name='setpassword_view'),
     path("reg/",views.reg,name='reg_view'),
+    path("success/",views.success_page,name='success_view'),
 ]
