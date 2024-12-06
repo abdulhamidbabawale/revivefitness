@@ -12,7 +12,7 @@
     <div class="container-fluid form_box">
       <h3>Enter your personal info</h3>
       <h5>Tell us a little bit about yourself to get started.</h5>
-      <form class="needs-validation" action="" novalidate>
+      <form class="needs-validation" action="{% url 'personaldetails_view' %}" novalidate>
         <div class="details">
           <p>Personal Details</p>
 
@@ -22,13 +22,13 @@
 
 
           <fieldset>
-            <input class="form-control " type="text" placeholder="First name" required>
+            <input class="form-control " type="text" placeholder="First name" name="fname"  required>
             <div class="invalid-feedback">
               This field is required
             </div>
           </fieldset>
           <fieldset>
-            <input class="form-control" type="text" placeholder="Last name" required>
+            <input class="form-control" type="text" placeholder="Last name" name="lname" required>
             <div class="invalid-feedback">
               This field is required
             </div>
