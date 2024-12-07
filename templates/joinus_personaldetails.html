@@ -17,11 +17,6 @@
         <div class="details">
           <p>Personal Details</p>
 
-
-          <input id="planDurationInput" class="form-control invisible-input" type="text" placeholder="" required>
-          <input id="selectedClassInput" class="form-control invisible-input" type="text" placeholder="" required>
-
-
           <fieldset>
             <input class="form-control " type="text" placeholder="First name" name="fname"  required>
             <div class="invalid-feedback">
@@ -125,34 +120,6 @@
 
 
 
-  <script>
-    (() => {
-      'use strict'
 
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      const forms = document.querySelectorAll('.needs-validation')
-
-      // Loop over them and prevent submission
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-
-          form.classList.add('was-validated')
-        }, false)
-      })
-    })()
-  </script>
-
-<script>
-  // Retrieve the saved data
-  const planDuration = localStorage.getItem('planDuration');
-  const selectedClass = localStorage.getItem('selectedClass');
-
-  document.getElementById('planDurationInput').value = planDuration ? planDuration : 'Not selected';
-  document.getElementById('selectedClassInput').value = selectedClass ? selectedClass : 'Not selected';
-</script>
 {% endblock %}
 
