@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.environ.get('DEBUG','True') == 'True'
 # DEBUG = True
 ALLOWED_HOSTS = ['revivefitness.onrender.com','127.0.0.1']
-
+PAYSTACK_API_KEY=os.environ.get('paystack_api_key')
 
 # Application definition
 
@@ -60,7 +60,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 ROOT_URLCONF = "gymapp.urls"
 
 TEMPLATES = [
