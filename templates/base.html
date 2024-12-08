@@ -109,9 +109,11 @@
     <div class="mm ">
       <div class="row top">
         <div class="col oo">
-          <div class="num  {% if active_page == 'p_details' %} active {% endif %}">
+          <div class="num  {% if active_page == 'success_page' %} active2 all_checked {% endif %}{% if active_page == 'p_details' %} active2 {% endif %}">
 
             {% if active_page == 'p_details' %}
+            <i class="fa-solid fa-check"></i>
+            {% elif active_page == 'success_page'%}
             <i class="fa-solid fa-check"></i>
             {% else %}
             <p>1</p>
@@ -124,8 +126,13 @@
           <hr>
         </div>
         <div class="col oo">
-          <div class="num set_page_progress">
+          <div class="num {% if active_page == 'success_page' %} active2 all_checked {% endif %} set_page_progress">
+
+            {% if active_page == 'success_page'%}
+            <i class="fa-solid fa-check"></i>
+            {% else %}
             <p>2</p>
+            {% endif %}
           </div>
           <li>personal details</li>
         </div>
@@ -133,8 +140,13 @@
           <hr>
         </div>
         <div class="col oo">
-          <div class="num">
+          <div class="num {% if active_page == 'success_page' %} active2 all_checked {% endif %}">
+
+            {% if active_page == 'success_page'%}
+            <i class="fa-solid fa-check"></i>
+            {% else %}
             <p>3</p>
+            {% endif %}
           </div>
           <li>payment</li>
         </div>
@@ -142,8 +154,12 @@
           <hr>
         </div>
         <div class="col oo">
-          <div class="num">
+          <div class="num  {% if active_page == 'success_page' %} active2 all_checked {% endif %}">
+            {% if active_page == 'success_page' %}
+            <i class="fa-solid fa-check"></i>
+            {% else %}
             <p>4</p>
+            {% endif %}
           </div>
           <li>checkout</li>
         </div>
