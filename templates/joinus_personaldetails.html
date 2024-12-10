@@ -12,46 +12,42 @@
     <div class="container-fluid form_box">
       <h3>Enter your personal info</h3>
       <h5>Tell us a little bit about yourself to get started.</h5>
-      <form class="needs-validation" action="" novalidate>
+      <form class="needs-validation" method="post" action="{% url 'personaldetails_view' %}" novalidate>
+        {%csrf_token%}
         <div class="details">
           <p>Personal Details</p>
 
-
-          <input id="planDurationInput" class="form-control invisible-input" type="text" placeholder="" required>
-          <input id="selectedClassInput" class="form-control invisible-input" type="text" placeholder="" required>
-
-
           <fieldset>
-            <input class="form-control " type="text" placeholder="First name" required>
+            <input class="form-control " type="text" placeholder="First name" name="fname"  required>
             <div class="invalid-feedback">
               This field is required
             </div>
           </fieldset>
           <fieldset>
-            <input class="form-control" type="text" placeholder="Last name" required>
+            <input class="form-control" type="text" placeholder="Last name" name="lname" required>
             <div class="invalid-feedback">
               This field is required
             </div>
           </fieldset>
           <fieldset>
-            <input class="form-control" type="text" placeholder="Date of birth" onfocus="this.type='date'" onblur="this.type='text'" required>
+            <input class="form-control" type="text" name="date_of_birth" placeholder="Date of birth" onfocus="this.type='date'" onblur="this.type='text'" required>
             <div class="invalid-feedback">
               This field is required
             </div>
           </fieldset>
           <fieldset>
-            <input class="form-control" type="number" placeholder="phone number" required>
+            <input class="form-control" type="number" name="phone_number" placeholder="phone number" required>
             <div class="invalid-feedback">
               This field is required
             </div>
           </fieldset>
           <fieldset>
-            <input class="form-control" type="email" placeholder="Email" required>
+            <input class="form-control" type="email" name="email" placeholder="Email" required>
             <div class="invalid-feedback">
               This field is required
             </div>
           </fieldset>
-            <select class="form-select"  required>
+            <select class="form-select" name="gender" required>
               <option selected hidden disabled id="gender">gender</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -66,13 +62,13 @@
         <div class="Address_Branch">
           <p>Address/Branch</p>
           <fieldset>
-            <input class="form-control" type="text" placeholder="Address line" required>
+            <input class="form-control" type="text" name="address" placeholder="Address line" required>
             <div class="invalid-feedback">
               This field is required
             </div>
           </fieldset>
           <fieldset>
-            <input class="form-control" type="text" placeholder="City" required>
+            <input class="form-control" type="text" placeholder="City" name="city" required>
             <div class="invalid-feedback">
               This field is required
             </div>
@@ -80,7 +76,7 @@
 
           <p id="dim">input the state you are currently located at</p>
           <fieldset>
-            <input class="form-control" type="text" placeholder="state" required>
+            <input class="form-control" type="text" name="state" placeholder="state" required>
             <div class="invalid-feedback">
               This field is required
             </div>
@@ -101,11 +97,13 @@
 
           <div class="row buttom_nav">
             <div class="col-5">
-              <a href=""><button id="exit">exit</button></a>
+              <a href=""><button type="submit" id="exit">exit</button></a>
             </div>
           <div class="col-2"></div>
           <div class="col-5">
-            <a href="setpassword.html"><button id="next">next</button></a>
+            <a href="">
+              <button type="submit" id="next">next</button>
+            </a>
           </div>
 
         </div>
@@ -124,34 +122,6 @@
 
 
 
-  <script>
-    (() => {
-      'use strict'
 
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      const forms = document.querySelectorAll('.needs-validation')
-
-      // Loop over them and prevent submission
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-
-          form.classList.add('was-validated')
-        }, false)
-      })
-    })()
-  </script>
-
-<script>
-  // Retrieve the saved data
-  const planDuration = localStorage.getItem('planDuration');
-  const selectedClass = localStorage.getItem('selectedClass');
-
-  document.getElementById('planDurationInput').value = planDuration ? planDuration : 'Not selected';
-  document.getElementById('selectedClassInput').value = selectedClass ? selectedClass : 'Not selected';
-</script>
 {% endblock %}
 
