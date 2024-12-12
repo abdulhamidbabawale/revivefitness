@@ -31,7 +31,6 @@ class User(AbstractBaseUser,PermissionsMixin):
     fname = models.CharField(max_length=255, blank=True)
     lname = models.CharField(max_length=255, blank=True)
     phone_number = models.CharField(max_length=20, blank=True, null=True, unique=True)
-    date_of_birth = models.DateTimeField(blank=True, null=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
@@ -61,7 +60,6 @@ class Plans(models.Model):
     plan_price=models.IntegerField(blank=False)
 
 class Classes(models.Model):
-    # classs_img = models.ImageField(upload_to='images/')
     classs_img = CloudinaryField('image',folder='revive fitness/classes')
     class_name = models.CharField(max_length=100,unique=True)
     decription=models.TextField(null=False,blank=False)
@@ -79,7 +77,6 @@ class PlanDuration(models.Model):
     planid=models.ForeignKey(Plans, on_delete=models.CASCADE ,related_name='plans_duration_planid')
     plan_duration = models.CharField(max_length=10, choices=DURATION_CHOICES)
     classes = models.ForeignKey(Classes,on_delete=models.CASCADE, related_name='classes_plan_duration')
-    # plan_duration=Choices('monthly', 'quaterly', 'yearly')
     total_price=models.IntegerField(null=True,blank=True)
     is_active_plan=models.BooleanField(default=True)
     is_expired=models.BooleanField(default=False)
@@ -98,10 +95,12 @@ class UserProfile(models.Model):
     userid=models.OneToOneField(User,on_delete=models.CASCADE ,related_name='profile_userid')
     profile_picture = CloudinaryField('image',folder='revive fitness/profile_pic')
     gender=models.CharField(max_length=25,null=True, blank=True)
+    date_of_birth = models.DateTimeField(blank=True, null=True)
     address = models.CharField(max_length=255, blank=True, null=True)
     city = models.CharField(max_length=100, blank=True, null=True)
     state = models.CharField(max_length=100, blank=True, null=True)
     zip_code = models.CharField(max_length=20, blank=True, null=True)
-    country = models.CharField(max_length=100, blank=True, null=True)
+    country = models.CharField(max_length=100,default='Nigeria', blank=True, null=True)
     plan_data = models.ForeignKey(PlanDuration, on_delete=models.SET_NULL, null=True, blank=True, related_name='profiles_plan_data')
+
 
