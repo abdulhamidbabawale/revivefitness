@@ -68,11 +68,31 @@ class Resource:
                   payment_page_url = transaction.get('authorization_url')
                   request.session['payment_page_url']=payment_page_url
                   reference = transaction.get('reference')
+                  request.session['reference']=reference
                   # print (payment_page_url)
                   # print(reference)
                   return payment_page_url, reference
                return None
           m=response_data()
+
+
+          return JsonResponse(response.json())
+      def verify_payment1(self,request,reference):
+          url="https://api.paystack.co/transaction/verify/{}".format(reference)
+          headers = {
+            "Authorization":f"Bearer {settings.PAYSTACK_API_KEY}",
+            "Content-Type": "application/json"
+              }
+
+          response = requests.get(url, headers=headers)
+          get_response_data=response
+          verify_response=get_response_data.json()
+          payload=verify_response.get('data',{})
+          status=payload.get('status')
+          gateway_response=payload.get('gateway_response')
+          request.session['status']=status
+          print(status)
+          print(gateway_response)
 
 
           return JsonResponse(response.json())
