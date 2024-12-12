@@ -21,7 +21,7 @@ def payment(request):
 def verify_payment(request):
     #  reference= "rr57di4o6l"
      reference=request.session.get('reference')
-     verify=res.verify_payment1(reference)
+     verify=res.verify_payment1(request,reference)
      return verify
 
 
@@ -56,6 +56,7 @@ def p_details(request):
           payment(request)
           payment_page=request.session.get('payment_page_url')
           return redirect (payment_page)
+
      res.cookies_data(request)
      print(Resource.cookies_data.selected_plan_id)
      print(request.session.get('fname', 'Key not found'))
@@ -66,6 +67,11 @@ def p_details(request):
           'active_page':'p_details',
           'payment_page':request.session.get('payment_page_url')
      }
+     reference=request.session.get('reference')
+     res.verify_payment1(request,reference)
+     p_status=request.session.get('status')
+     if p_status=='success':
+          return redirect ('success_view')
      return render(request,'joinus_personaldetails.html',context)
 def joinus_plan(request):
      classes=Classes.objects.all().values()
@@ -80,17 +86,7 @@ def joinus_plan(request):
      #use the selected plan id to get the plan name
      selected_plan=Plans.objects.filter(id=selected_id).values_list('plan_name', flat=True).first()
 
-     #get plan cost for platinum and standard
-     standard_cost = Plans.objects.filter(plan_name='standard').values_list('plan_price', flat=True).first()
-     platinum_cost = Plans.objects.filter(plan_name='platinum').values_list('plan_price', flat=True).first()
 
-     #multiply plan cost based on duration and use '{:,}' to add ' , ' symbol to the price
-    #  platinum_monthly='{:,}'.format(platinum_cost)
-    #  platinum_quterly= '{:,}'.format(int(platinum_cost * 2.4))
-    #  platinum_yearly='{:,}'.format(int(platinum_cost * 7.4))
-    #  standard_monthly='{:,}'.format(standard_cost)
-    #  standard_quterly= '{:,}'.format(int(standard_cost * 2.4))
-    #  standard_yearly='{:,}'.format(int(standard_cost * 7.4))
      duration_cost={
           'platinum_quterly': Resource.plan_duration_cost.platinum_quterly,
           'platinum_yearly':Resource.plan_duration_cost.platinum_yearly,
@@ -124,28 +120,20 @@ def reg(request):
 
      return render(request,'register.html')
 
-# def plan_data(request):
-#      if request.method == 'POST':
-#           userid=
-#           planid
-#           plan_duration
-#           total_price
 
 def success_page(request):
+     request.session.get('fname')
+     request.session.get('lname')
+     request.session.get('email')
+     request.session.get('phone_number')
+     request.session.get('gender')
+     request.session.get('address')
+     request.session.get('city')
+     request.session.get('state')
+     p_status=request.session.get('status')
+     if p_status=='success':
+          return redirect ('success_view')
      context={
         'active_page':'success_page',
      }
      return render(request,'success.html',context)
-# def registration_form(request):
-#      if request.method == 'POST':
-#           fname=request.POST.get('fname')
-#           lname=request.POST.get('lname')
-#           phone_number=request.POST.get('phone_number')
-
-#           gender=request.POST.get('gender')
-#           address=request.POST.get('address')
-#           city=request.POST.get('city')
-#           state=request.POST.get('state')
-#           zip_code=request.Post.get('zip_code')
-#           country=request.POST.get('country')
-#           plan_data=request.POST.get('plan_duration')
