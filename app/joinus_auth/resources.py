@@ -38,11 +38,11 @@ class Resource:
                 return int(price)
            elif plan_id == '1':
                 if duration == 'monthly':
-                   price =platinum_cost
+                   price =standard_cost
                 if duration == 'quarterly':
-                   price =platinum_cost * 2.4
+                   price =standard_cost * 2.4
                 if duration == 'yearly':
-                   price =platinum_cost * 7.4
+                   price =standard_cost * 7.4
                 return int(price)
       def payment1(self,request,amount,email):
           url= "https://api.paystack.co/transaction/initialize"
