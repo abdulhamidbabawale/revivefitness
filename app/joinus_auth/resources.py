@@ -24,8 +24,6 @@ class Resource:
       def naira_to_kobo(amount):
            return int(amount * 100)
       def plan_price(self,request):
-          #  Resource.cookies_data(self,request)
-          #  price = None
            plan_id=request.COOKIES.get('selectedplan')
            duration=request.COOKIES.get('planDuration')
            if plan_id == '2':
