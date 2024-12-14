@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from ..site_data.models import User,Classes,Plans
+from ..site_data.models import User,Classes,Plans,UserProfile
 from django.http import JsonResponse
 import requests
 from .resources import Resource
@@ -122,17 +122,25 @@ def reg(request):
 
 
 def success_page(request):
-     request.session.get('fname')
-     request.session.get('lname')
-     request.session.get('email')
-     request.session.get('phone_number')
-     request.session.get('gender')
-     request.session.get('address')
-     request.session.get('city')
-     request.session.get('state')
-     p_status=request.session.get('status')
-     if p_status=='success':
-          return redirect ('success_view')
+     fname=request.session.get('fname')
+     lname=request.session.get('lname')
+     email=request.session.get('email')
+     phone_number=request.session.get('phone_number')
+     gender=request.session.get('gender')
+     address=request.session.get('address')
+     city=request.session.get('city')
+     state=request.session.get('state')
+     selectedplan_id = request.session.get('selectedplan_id')
+     selectedclass_id = request.session.get('selectedclass_id')
+     selectedplan_duration_id=request.session.get('selectedplan_duration_id')
+    #  p_status=request.session.get('status')
+    #  if p_status=='success':
+    #       return redirect ('success_view')
+    #  user=User.objects.create_user(fname=fname,lname=lname,email=email,phone_number=phone_number,password='test')
+    #  user.save()
+     user_id=User.objects.filter(email=email).values_list('id', flat=True)
+     print(user_id)
+    #  profile=UserProfile.objects.create
      context={
         'active_page':'success_page',
      }
