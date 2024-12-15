@@ -93,7 +93,7 @@ class Benefits(models.Model):
 
 class UserProfile(models.Model):
     userid=models.OneToOneField(User,on_delete=models.CASCADE ,related_name='profile_userid')
-    profile_picture = CloudinaryField('image',folder='revive fitness/profile_pic')
+    profile_picture = CloudinaryField('image',folder='revive fitness/profile_pic',blank=True,null=True)
     gender=models.CharField(max_length=25,null=True, blank=True)
     date_of_birth = models.DateTimeField(blank=True, null=True)
     address = models.CharField(max_length=255, blank=True, null=True)
