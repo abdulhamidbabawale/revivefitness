@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from ..site_data.models import User,Classes,Plans,UserProfile
+from ..site_data.models import User,Classes,Plans,UserProfile,PlanDuration
 from django.http import JsonResponse
 import requests
 from .resources import Resource
@@ -132,15 +132,34 @@ def success_page(request):
      state=request.session.get('state')
      selectedplan_id = request.session.get('selectedplan_id')
      selectedclass_id = request.session.get('selectedclass_id')
-     selectedplan_duration_id=request.session.get('selectedplan_duration_id')
-    #  p_status=request.session.get('status')
-    #  if p_status=='success':
-    #       return redirect ('success_view')
-    #  user=User.objects.create_user(fname=fname,lname=lname,email=email,phone_number=phone_number,password='test')
-    #  user.save()
-     user_id=User.objects.filter(email=email).values_list('id', flat=True)
-     print(user_id)
-    #  profile=UserProfile.objects.create
+     selectedplan_duration=request.session.get('selectedplan_duration_id')
+     if User.objects.filter(email=email).exists():
+    #  try:
+          print('user exitst')
+    #  except User.DoesNotExist:
+     else:
+          user=User.objects.create_user(fname=fname,lname=lname,email=email,phone_number=phone_number,password='test')
+          user.save()
+          # try:
+          user_id=User.objects.filter(email=email).values_list('id',flat=True).first()
+          print(user_id)
+          print(selectedplan_duration)
+          planduration,created = PlanDuration.objects.get_or_create(userid_id=user_id,
+          defaults={
+               'planid_id':selectedplan_id,
+               'plan_duration':selectedplan_duration,
+               'classes_id':selectedclass_id,
+               'total_price':res.plan_price(request)
+          })
+          if created:
+               print('created')
+          # planduration=PlanDuration.objects.create(userid_id=user_id,planid_id=selectedplan_id,plan_duration=selectedplan_duration,classes_id=selectedclass_id,total_price=res.plan_price(request))
+
+          durationid=PlanDuration.objects.get(userid=user_id)
+          print(durationid.id)
+          profile=UserProfile.objects.create(userid_id=user_id,gender=gender,address=address,city=city,state=state,plan_data_id=durationid.id)
+
+
      context={
         'active_page':'success_page',
      }
