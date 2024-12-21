@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from app.site_data.models import User
-from django.contrib.auth import login as lt,authenticate
+from django.contrib.auth import login ,authenticate
 from django.contrib import messages
 
 # Create your views here.
@@ -15,7 +15,7 @@ def login(request):
              messages.error(request, f"User {email} Not Found....")
              return redirect("home_view")
         if user is not None:
-            lt(request, user)
+            login(request, user)
             messages.success(request, "You have successfully logged in!")
             return redirect("home_view")
 
