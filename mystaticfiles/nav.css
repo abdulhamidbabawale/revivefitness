@@ -66,6 +66,35 @@ nav a.active{
 .left_nav{
   margin-left:140px ;
 }
+.ppic{
+  position: relative;
+  height:0;
+  width: fit-content;
+  padding:0;
+  max-height: fit-content;
+}
+.ppic p{
+  white-space: nowrap;
+  padding:0;
+    margin: 0;
+}
+.ic{
+position: relative;
+  padding-left: 40px;
+}
+  .iconamoon--profile-circle-fill {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M12 4a8 8 0 0 0-6.96 11.947A4.99 4.99 0 0 1 9 14h6a4.99 4.99 0 0 1 3.96 1.947A8 8 0 0 0 12 4m7.943 14.076q.188-.245.36-.502A9.96 9.96 0 0 0 22 12c0-5.523-4.477-10-10-10S2 6.477 2 12a9.96 9.96 0 0 0 2.057 6.076l-.005.018l.355.413A9.98 9.98 0 0 0 12 22q.324 0 .644-.02a9.95 9.95 0 0 0 5.031-1.745a10 10 0 0 0 1.918-1.728l.355-.413zM12 6a3 3 0 1 0 0 6a3 3 0 0 0 0-6' clip-rule='evenodd'/%3E%3C/svg%3E");
+    background-color: #0FA4AF;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
 
 .login_join {
   float: right;
