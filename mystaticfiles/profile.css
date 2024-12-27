@@ -218,6 +218,12 @@ dt{
   background-color: rgb(175, 221, 229,0.1); /* White */
 }
 
+@media only screen and (max-width: 1024px){
+  .all_info{
+    width:700px;
+    margin: auto;
+  }
+}
 @media only screen and (max-width: 768px){
   .all_info{
     width:fit-content;
@@ -243,6 +249,10 @@ dt{
     margin-top: 10px;
     margin-right: 10px;
   }
+  .acc_table td:nth-child(4){
+    display: block;
+    overflow-x: auto;
+  }
 }
 
 @media only screen and (max-width: 380px){
@@ -257,11 +267,13 @@ dt{
     border-radius: 5px;
     height: 30px;
     margin-top: 4px;
+    width: 100%;
   }
   .upgrade_membership {
     border-radius: 5px;
     height: 30px;
     margin-bottom: 4px;
+    width: 100%;
 
   }
   .terminate_membership p{
@@ -270,6 +282,7 @@ dt{
     margin-left: 10px;
     margin-top: 2px;
     font-size: 16px;
+    white-space: nowrap;
   }
   .upgrade_membership p{
     margin: 0;
@@ -277,6 +290,7 @@ dt{
     margin-left: 10px;
     margin-top: 2px;
     font-size: 16px;
+    white-space: nowrap;
   }
 
   #iconify{
