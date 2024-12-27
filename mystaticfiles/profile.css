@@ -6,22 +6,27 @@ main{
   margin-top: 90px;
 }
 .all_info{
-  width: 700px;
+  width: 900px;
   margin: auto;
 }
 h4{
-  color: #0FA4AF;
+  color: #024950;
+  font-weight: 200;
+}
+h5{
+  color: #024950;
 }
 .basic_info{
   width: 100%;
   height: fit-content;
-  border:solid 1.4px #0FA4AF;
+  border:solid 2px #024950;
   border-radius: 10px;
   margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   justify-content: baseline;
   padding: 10px;
+  background-color: rgba(2, 73, 80,0.2);
 }
 
 .profile_pic{
@@ -53,22 +58,24 @@ h4{
 .perosnal_info{
   width: 100%;
   height: fit-content;
-  border:solid 1.4px #0FA4AF;
+  border:solid 2px #024950;
   border-radius: 10px;
   margin-bottom: 50px;
   padding: 10px;
+  background-color: rgba(2, 73, 80,0.2);
 }
 .perosnal_info h5{
  margin-bottom: 15px;
 }
 #edit_info{
-  border: #0FA4AF 1px solid;
+  border: #024950 2px solid;
   border-radius: 5px;
   background: none;
-  color: #0FA4AF;
+  color: #024950;
   float: right;
   padding-left: 5px;
   padding-right: 5px;
+  background-color: rgb(175, 221, 229,0.5);
 }
 
 .iconamoon--edit-light {
@@ -76,7 +83,7 @@ h4{
   width: 1em;
   height: 1em;
   --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m5 16l-1 4l4-1L19.586 7.414a2 2 0 0 0 0-2.828l-.172-.172a2 2 0 0 0-2.828 0zM15 6l3 3m-5 11h8'/%3E%3C/svg%3E");
-  background-color: #0FA4AF;
+  background-color: #024950;
   -webkit-mask-image: var(--svg);
   mask-image: var(--svg);
   -webkit-mask-repeat: no-repeat;
@@ -87,19 +94,21 @@ h4{
 .address_info{
   width: 100%;
   height: fit-content;
-  border:solid 1.4px #0FA4AF;
+  border:solid 2px #024950;
   border-radius: 10px;
   margin-bottom: 50px;
   padding: 10px;
+  background-color: rgba(2, 73, 80,0.2);
 }
 
 .plan_info{
   width: 100%;
   height: fit-content;
-  border:solid 1.4px #0FA4AF;
+  border:solid 2px #024950;
   border-radius: 10px;
   margin-bottom: 50px;
   padding: 10px;
+  background-color: rgba(2, 73, 80,0.2);
 }
 .plan_info p{
   padding: 0;
@@ -119,15 +128,18 @@ h4{
   mask-size: 100% 100%;
 }
 .upgrade_membership{
-  border: #0FA4AF 1.4px solid;
+  border: #0FA4AF 2px solid;
   border-radius: 10px;
   height: 50px;
   display: flex;
   justify-content: center;
+  /* background-color: rgb(175, 221, 229,0.5); */
+  background-color: rgba(15, 164, 175,0.2);
 }
 .upgrade_membership p{
   display: flex;
   margin-top: 10px;
+  color: #0FA4AF;
 }
 
 .material-symbols--cancel {
@@ -153,13 +165,15 @@ h4{
   height: 50px;
   display: flex;
   justify-content: center;
+  background-color: rgba(189, 39, 39,0.2);
 }
 .terminate_membership p{
   display: flex;
   margin-top: 10px;
+  color: #BD2727;
 }
 .account_history {
-  border: #0FA4AF 1.4px solid;
+  border: #024950 2px solid;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 90px;
@@ -175,7 +189,14 @@ h4{
   padding-top: 7px;
 padding-bottom: 7px;
 }
-
+.account_history tr:nth-child(1){
+/* padding-top:0 ; */
+/* margin: 0; */
+padding: 0;
+}
+dt{
+  color: #024950;
+}
 
  dd{
   font-size: 15px;
@@ -184,9 +205,12 @@ padding-bottom: 7px;
  td{
   font-size: 14px;
   font-weight: 100;
+  white-space: nowrap;
  }
  .acc_table tr:nth-child(even) {
-  background-color: rgb(175, 221, 229,0.7); /* Light grey */
+  /* background-color: rgb(175, 221, 229,0.7);  */
+  background-color: rgba(2, 73, 80,0.2);
+  border-radius: 6px;
 }
 
 /* Odd rows */
