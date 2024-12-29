@@ -9,11 +9,11 @@ main{
   width: 900px;
   margin: auto;
 }
-h4{
+.all_info h4{
   color: #024950;
   font-weight: 200;
 }
-h5{
+.all_info h5{
   color: #024950;
 }
 .basic_info{
@@ -298,10 +298,10 @@ dt{
     margin-top: -2px;
     margin-right: 10px;
   }
-  h4{
+  .all_info h4{
     font-size: 16px;
   }
-  h5{
+  .all_info h5{
     font-size: 16px;
     white-space: nowrap;
   }
